@@ -1,6 +1,7 @@
 pub mod comment;
 pub mod print;
 pub mod print_debug;
+pub mod print_display;
 
 use clap::{App, ArgMatches};
 
