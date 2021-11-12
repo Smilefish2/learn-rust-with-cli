@@ -8,6 +8,9 @@ description = "Learn rust with cli"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = "^2.33"
 
-rust-by-example = { path = "rust-by-example" }
+[dependencies.clap]
+version = "3.0.0-beta.5"
+
+[dependencies.rust-by-example]
+path = "rust-by-example"

@@ -1,6 +1,6 @@
 use clap::{App, AppSettings};
 
-use rust_by_example as rust_by_example;
+use rust_by_example::*;
 
 // read cargo env
 const NAME: Option<&'static str> = option_env!("CARGO_PKG_NAME");
@@ -17,17 +17,21 @@ pub fn run(){
         .about(DESCRIPTION.unwrap_or("unknown"))
         .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands([
-            rust_by_example::hello::hello_world::sub_command()
+            hello::sub_command(),
+            hello::comment::sub_command()
         ]);
 
     // clap matches
     let matches = app.get_matches();
 
-    rust_by_example::hello::hello_world::sub_handler(&matches);
+    // match subcommand
+    match matches.subcommand() {
+        // rust-by-example
+        Some((hello::NAME, sub_matches)) => hello::sub_handler(sub_matches),
+        Some((hello::comment::NAME, sub_matches)) => hello::comment::sub_handler(sub_matches),
 
 
-    // match matches.subcommand() {
-    //     ("", None) => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
-    //     _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
-    // }
+        None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
+        _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
+    }
 }
