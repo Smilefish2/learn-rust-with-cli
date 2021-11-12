@@ -1,31 +1,22 @@
-use clap::{App, Arg, ArgMatches};
+use clap::{App, ArgMatches};
+
+pub const COMMAND_NAME: &'static str = "rust-by-example:hello_word";
+const COMMAND_ABOUT: &'static str = "https://doc.rust-lang.org/rust-by-example/hello.html";
 
 pub fn sub_command<'a, 'b>() -> App<'a, 'b> {
-    let sub_command = App::new("test")
-        .about("does testing things")
-        .arg(
-            Arg::with_name("list")
-                .short("l")
-                .help("lists test values")
-        );
+    let sub_command = App::new(COMMAND_NAME)
+        .about(COMMAND_ABOUT);
     return sub_command;
 }
 
 pub fn sub_handler(matches :&ArgMatches){
-    // Statements here are executed when the compiled binary is called
+    if let Some(_matches) = matches.subcommand_matches(COMMAND_NAME) {
 
-    // Print text to the console
-    println!("Hello World!");
 
-    // You can check for the existence of subcommands, and if found use their
-    // matches just as you would the top level app
-    if let Some(matches) = matches.subcommand_matches("test") {
-        // "$ myapp test" was run
-        if matches.is_present("list") {
-            // "$ myapp test -l" was run
-            println!("Printing testing lists...");
-        } else {
-            println!("Not printing testing lists...");
-        }
+        // Statements here are executed when the compiled binary is called
+
+        // Print text to the console
+        println!("Hello World!");
+
     }
 }
