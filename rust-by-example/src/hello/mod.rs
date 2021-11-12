@@ -1,4 +1,5 @@
 pub mod comment;
+pub mod print;
 
 use clap::{App, ArgMatches};
 

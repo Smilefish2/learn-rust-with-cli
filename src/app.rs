@@ -18,7 +18,8 @@ pub fn run(){
         .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands([
             hello::sub_command(),
-            hello::comment::sub_command()
+            hello::comment::sub_command(),
+            hello::print::sub_command(),
         ]);
 
     // clap matches
@@ -29,6 +30,7 @@ pub fn run(){
         // rust-by-example
         Some((hello::NAME, sub_matches)) => hello::sub_handler(sub_matches),
         Some((hello::comment::NAME, sub_matches)) => hello::comment::sub_handler(sub_matches),
+        Some((hello::print::NAME, sub_matches)) => hello::print::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
