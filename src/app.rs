@@ -23,6 +23,7 @@ pub fn run(){
             hello::print_debug::sub_command(),
             hello::print_display::sub_command(),
             hello::print_display_testcase_list::sub_command(),
+            hello::print_fmt::sub_command(),
         ]);
 
     // clap matches
@@ -37,6 +38,7 @@ pub fn run(){
         Some((hello::print_debug::NAME, sub_matches)) => hello::print_debug::sub_handler(sub_matches),
         Some((hello::print_display::NAME, sub_matches)) => hello::print_display::sub_handler(sub_matches),
         Some((hello::print_display_testcase_list::NAME, sub_matches)) => hello::print_display_testcase_list::sub_handler(sub_matches),
+        Some((hello::print_fmt::NAME, sub_matches)) => hello::print_fmt::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)

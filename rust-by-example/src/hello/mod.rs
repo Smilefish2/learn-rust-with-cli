@@ -3,6 +3,7 @@ pub mod print;
 pub mod print_debug;
 pub mod print_display;
 pub mod print_display_testcase_list;
+pub mod print_fmt;
 
 use clap::{App, ArgMatches};
 
