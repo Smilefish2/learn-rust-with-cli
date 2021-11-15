@@ -10,7 +10,7 @@ const DESCRIPTION: Option<&'static str> = option_env!("CARGO_PKG_DESCRIPTION");
 
 pub fn run(){
 
-    // clap app
+    // clap cli
     let app = App::new(NAME.unwrap_or("unknown"))
         .version(VERSION.unwrap_or("unknown"))
         .author(AUTHORS.unwrap_or("unknown"))

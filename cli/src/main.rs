@@ -1,4 +1,4 @@
-// export app mod
+// export cli mod
 mod app;
 
 fn main() {
