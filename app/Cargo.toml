@@ -1,7 +1,7 @@
 [package]
 name = "learn-rust-with-cli"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 authors = ["JmJones <yang.jmj@gmail.com>"]
 description = "Learn rust with cli"
 
