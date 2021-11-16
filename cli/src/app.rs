@@ -17,6 +17,7 @@ pub fn run(){
         .about(DESCRIPTION.unwrap_or("unknown"))
         .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands([
+            // rust-by-example:hello
             hello::sub_command(),
             hello::comment::sub_command(),
             hello::print::sub_command(),
@@ -24,6 +25,8 @@ pub fn run(){
             hello::print_display::sub_command(),
             hello::print_display_testcase_list::sub_command(),
             hello::print_fmt::sub_command(),
+            // rust-by-example:primitives
+            primitives::sub_command(),
         ]);
 
     // clap matches
@@ -31,7 +34,7 @@ pub fn run(){
 
     // match subcommand
     match matches.subcommand() {
-        // rust-by-example
+        // rust-by-example:hello
         Some((hello::NAME, sub_matches)) => hello::sub_handler(sub_matches),
         Some((hello::comment::NAME, sub_matches)) => hello::comment::sub_handler(sub_matches),
         Some((hello::print::NAME, sub_matches)) => hello::print::sub_handler(sub_matches),
@@ -39,6 +42,8 @@ pub fn run(){
         Some((hello::print_display::NAME, sub_matches)) => hello::print_display::sub_handler(sub_matches),
         Some((hello::print_display_testcase_list::NAME, sub_matches)) => hello::print_display_testcase_list::sub_handler(sub_matches),
         Some((hello::print_fmt::NAME, sub_matches)) => hello::print_fmt::sub_handler(sub_matches),
+        // rust-by-example:primitives
+        Some((primitives::NAME, sub_matches)) => primitives::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)

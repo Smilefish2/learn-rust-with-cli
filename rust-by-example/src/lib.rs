@@ -1,5 +1,6 @@
 // export mod
 pub mod hello;
+pub mod primitives;
 
 
 
