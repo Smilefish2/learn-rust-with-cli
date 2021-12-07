@@ -1,11 +1,7 @@
+use clap::{App, ArgMatches};
+
 pub mod comment;
 pub mod print;
-pub mod print_debug;
-pub mod print_display;
-pub mod print_display_testcase_list;
-pub mod print_fmt;
-
-use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:hello";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/hello.html";

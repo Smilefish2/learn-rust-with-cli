@@ -1,5 +1,10 @@
 use clap::{App, ArgMatches};
 
+pub mod print_debug;
+pub mod print_display;
+pub mod print_display_testcase_list;
+pub mod print_fmt;
+
 pub const NAME: &'static str = "rust-by-example:hello/print";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/hello/print.html";
 
