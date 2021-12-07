@@ -1,4 +1,5 @@
 pub mod structs;
+pub mod enums;
 
 use clap::{App, ArgMatches};
 
