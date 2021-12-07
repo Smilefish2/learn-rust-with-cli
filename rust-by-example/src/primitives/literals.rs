@@ -25,7 +25,7 @@ Rust 提供了一系列的运算符（operator），它们的优先级 和类 C 
 **/
 
 pub fn sub_handler(_matches :&ArgMatches){
-// 整数相加
+    // 整数相加
     println!("1 + 2 = {}", 1u32 + 2);
 
     // 整数相减

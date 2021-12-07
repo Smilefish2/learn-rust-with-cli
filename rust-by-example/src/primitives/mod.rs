@@ -1,4 +1,5 @@
 pub mod literals;
+pub mod tuples;
 
 use clap::{App, ArgMatches};
 
