@@ -29,7 +29,7 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
 struct Matrix(f32, f32, f32, f32);
 
 pub fn sub_handler(_matches :&ArgMatches){
-// 包含各种不同类型的元组
+    // 包含各种不同类型的元组
     let long_tuple = (1u8, 2u16, 3u32, 4u64,
                       -1i8, -2i16, -3i32, -4i64,
                       0.1f32, 0.2f64,

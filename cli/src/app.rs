@@ -29,6 +29,7 @@ pub fn run(){
             primitives::sub_command(),
             primitives::literals::sub_command(),
             primitives::tuples::sub_command(),
+            primitives::array::sub_command(),
         ]);
 
     // clap matches
@@ -48,6 +49,7 @@ pub fn run(){
         Some((primitives::NAME, sub_matches)) => primitives::sub_handler(sub_matches),
         Some((primitives::literals::NAME, sub_matches)) => primitives::literals::sub_handler(sub_matches),
         Some((primitives::tuples::NAME, sub_matches)) => primitives::tuples::sub_handler(sub_matches),
+        Some((primitives::array::NAME, sub_matches)) => primitives::array::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
