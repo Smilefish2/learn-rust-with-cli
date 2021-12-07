@@ -28,7 +28,7 @@ fn analyze_slice(slice: &[i32]) {
 }
 
 pub fn sub_handler(_matches :&ArgMatches){
-// 定长数组（类型标记是多余的）
+    // 定长数组（类型标记是多余的）
     let xs: [i32; 5] = [1, 2, 3, 4, 5];
 
     // 所有元素可以初始化成相同的值
