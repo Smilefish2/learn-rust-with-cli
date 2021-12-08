@@ -44,6 +44,7 @@ pub fn run(){
             variable_bindings::declare::sub_command(),
             // rust-by-example:types
             types::sub_command(),
+            types::cast::sub_command(),
         ]);
 
     // clap matches
@@ -79,6 +80,7 @@ pub fn run(){
         Some((variable_bindings::declare::NAME, sub_matches)) => variable_bindings::declare::sub_handler(sub_matches),
         // rust-by-example:types
         Some((types::NAME, sub_matches)) => types::sub_handler(sub_matches),
+        Some((types::cast::NAME, sub_matches)) => types::cast::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
