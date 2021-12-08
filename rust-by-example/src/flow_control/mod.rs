@@ -1,6 +1,6 @@
 use clap::{App, ArgMatches};
 
-// pub mod comment;
+pub mod if_else;
 // pub mod print;
 
 pub const NAME: &'static str = "rust-by-example:flow_control";
