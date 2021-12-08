@@ -41,6 +41,7 @@ pub fn run(){
             variable_bindings::sub_command(),
             variable_bindings::mutability::sub_command(),
             variable_bindings::scope::sub_command(),
+            variable_bindings::declare::sub_command(),
         ]);
 
     // clap matches
@@ -73,6 +74,7 @@ pub fn run(){
         Some((variable_bindings::NAME, sub_matches)) => variable_bindings::sub_handler(sub_matches),
         Some((variable_bindings::mutability::NAME, sub_matches)) => variable_bindings::mutability::sub_handler(sub_matches),
         Some((variable_bindings::scope::NAME, sub_matches)) => variable_bindings::scope::sub_handler(sub_matches),
+        Some((variable_bindings::declare::NAME, sub_matches)) => variable_bindings::declare::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
