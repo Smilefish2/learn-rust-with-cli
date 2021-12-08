@@ -1,6 +1,7 @@
 use clap::{App, ArgMatches};
 
 pub mod nested;
+pub mod returns;
 
 pub const NAME: &'static str = "rust-by-example:flow_control/loop";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control/loop.html";
