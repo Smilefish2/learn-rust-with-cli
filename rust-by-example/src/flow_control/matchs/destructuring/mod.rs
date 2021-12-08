@@ -2,6 +2,7 @@ use clap::{App, ArgMatches};
 
 pub mod destructure_tuple;
 pub mod destructure_enum;
+pub mod destructure_pointers;
 
 pub const NAME: &'static str = "rust-by-example:flow_control/match/destructuring";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control/match/destructuring.html";
