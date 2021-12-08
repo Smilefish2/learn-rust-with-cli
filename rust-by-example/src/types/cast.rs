@@ -21,7 +21,7 @@ pub fn sub_handler(_matches :&ArgMatches){
     let decimal = 65.4321_f32;
 
     // 错误！不提供隐式转换
-    let integer: u8 = decimal;
+    // let integer: u8 = decimal;
     // 改正 ^ 注释掉这一行
 
     // 可以显式转换
