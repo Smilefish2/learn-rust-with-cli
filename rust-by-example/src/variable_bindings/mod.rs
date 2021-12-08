@@ -1,6 +1,7 @@
 pub mod mutability;
 pub mod scope;
 pub mod declare;
+pub mod freeze;
 
 use clap::{App, ArgMatches};
 
