@@ -55,6 +55,8 @@ pub fn run(){
             conversion::string::sub_command(),
             // rust-by-example:expression
             expression::sub_command(),
+            // rust-by-example:expression
+            flow_control::sub_command(),
 
         ]);
 
@@ -102,7 +104,8 @@ pub fn run(){
         Some((conversion::string::NAME, sub_matches)) => conversion::string::sub_handler(sub_matches),
         // rust-by-example:expression
         Some((expression::NAME, sub_matches)) => expression::sub_handler(sub_matches),
-
+        // rust-by-example:flow_control
+        Some((flow_control::NAME, sub_matches)) => flow_control::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
