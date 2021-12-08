@@ -71,6 +71,7 @@ pub fn run(){
             flow_control::matchs::guard::sub_command(),
             flow_control::matchs::binding::sub_command(),
             flow_control::if_let::sub_command(),
+            flow_control::while_let::sub_command(),
         ]);
 
     // clap matches
@@ -133,6 +134,7 @@ pub fn run(){
         Some((flow_control::matchs::guard::NAME, sub_matches)) => flow_control::matchs::guard::sub_handler(sub_matches),
         Some((flow_control::matchs::binding::NAME, sub_matches)) => flow_control::matchs::binding::sub_handler(sub_matches),
         Some((flow_control::if_let::NAME, sub_matches)) => flow_control::if_let::sub_handler(sub_matches),
+        Some((flow_control::while_let::NAME, sub_matches)) => flow_control::while_let::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
