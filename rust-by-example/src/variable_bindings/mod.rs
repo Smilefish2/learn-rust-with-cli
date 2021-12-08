@@ -1,4 +1,5 @@
 pub mod mutability;
+pub mod scope;
 
 use clap::{App, ArgMatches};
 
