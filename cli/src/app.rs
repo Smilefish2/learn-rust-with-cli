@@ -65,6 +65,7 @@ pub fn run(){
             flow_control::fors::sub_command(),
             flow_control::matchs::sub_command(),
             flow_control::matchs::destructuring::destructure_tuple::sub_command(),
+            flow_control::matchs::destructuring::destructure_enum::sub_command(),
 
         ]);
 
@@ -122,6 +123,7 @@ pub fn run(){
         Some((flow_control::fors::NAME, sub_matches)) => flow_control::fors::sub_handler(sub_matches),
         Some((flow_control::matchs::NAME, sub_matches)) => flow_control::matchs::sub_handler(sub_matches),
         Some((flow_control::matchs::destructuring::destructure_tuple::NAME, sub_matches)) => flow_control::matchs::destructuring::destructure_tuple::sub_handler(sub_matches),
+        Some((flow_control::matchs::destructuring::destructure_enum::NAME, sub_matches)) => flow_control::matchs::destructuring::destructure_enum::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
