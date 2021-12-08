@@ -1,5 +1,6 @@
 pub mod from_into;
 pub mod try_from_try_into;
+pub mod string;
 
 use clap::{App, ArgMatches};
 
