@@ -1,6 +1,7 @@
 pub mod cast;
 pub mod literals;
 pub mod inference;
+pub mod alias;
 
 use clap::{App, ArgMatches};
 

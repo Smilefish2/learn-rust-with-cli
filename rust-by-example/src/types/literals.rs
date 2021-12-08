@@ -14,8 +14,6 @@ pub fn sub_command<'help>() -> App<'help> {
 
 无后缀的数值字面量，其类型取决于怎样使用它们。如果没有限制，编译器会对整数使用 i32，对浮点数使用 f64。
 */
-// 不显示类型转换产生的溢出警告。
-#[allow(overflowing_literals)]
 pub fn sub_handler(_matches :&ArgMatches){
     // 带后缀的字面量，其类型在初始化时已经知道了。
     let x = 1u8;

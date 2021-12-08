@@ -12,8 +12,6 @@ pub fn sub_command<'help>() -> App<'help> {
 /**
 Rust 的类型推断引擎是很聪明的，它不只是在初始化时看看右值（r-value）的 类型而已，它还会考察变量之后会怎样使用，借此推断类型。这是一个类型推导的进阶例子
 */
-// 不显示类型转换产生的溢出警告。
-#[allow(overflowing_literals)]
 pub fn sub_handler(_matches :&ArgMatches){
     // 因为有类型说明，编译器知道 `elem` 的类型是 u8。
     let elem = 5u8;
