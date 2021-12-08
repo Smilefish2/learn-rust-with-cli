@@ -34,6 +34,7 @@ pub fn run(){
             custom_types::structs::sub_command(),
             custom_types::enums::sub_command(),
             custom_types::enums::enum_use::sub_command(),
+            custom_types::enums::c_like::sub_command(),
         ]);
 
     // clap matches
@@ -59,6 +60,7 @@ pub fn run(){
         Some((custom_types::structs::NAME, sub_matches)) => custom_types::structs::sub_handler(sub_matches),
         Some((custom_types::enums::NAME, sub_matches)) => custom_types::enums::sub_handler(sub_matches),
         Some((custom_types::enums::enum_use::NAME, sub_matches)) => custom_types::enums::enum_use::sub_handler(sub_matches),
+        Some((custom_types::enums::c_like::NAME, sub_matches)) => custom_types::enums::c_like::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)

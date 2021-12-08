@@ -1,6 +1,7 @@
 use clap::{App, ArgMatches};
 
 pub mod enum_use;
+pub mod c_like;
 
 pub const NAME: &'static str = "rust-by-example:custom_types/enum";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum.html";
