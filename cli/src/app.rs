@@ -48,6 +48,8 @@ pub fn run(){
             types::literals::sub_command(),
             types::inference::sub_command(),
             types::alias::sub_command(),
+            // rust-by-example:conversion
+            conversion::sub_command(),
         ]);
 
     // clap matches
@@ -87,6 +89,8 @@ pub fn run(){
         Some((types::literals::NAME, sub_matches)) => types::literals::sub_handler(sub_matches),
         Some((types::inference::NAME, sub_matches)) => types::inference::sub_handler(sub_matches),
         Some((types::alias::NAME, sub_matches)) => types::alias::sub_handler(sub_matches),
+        // rust-by-example:conversion
+        Some((conversion::NAME, sub_matches)) => conversion::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
