@@ -2,6 +2,7 @@ use clap::{App, ArgMatches};
 
 pub mod destructuring;
 pub mod guard;
+pub mod binding;
 
 pub const NAME: &'static str = "rust-by-example:flow_control/match";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control/match.html";
