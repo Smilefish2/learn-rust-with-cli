@@ -53,6 +53,9 @@ pub fn run(){
             conversion::from_into::sub_command(),
             conversion::try_from_try_into::sub_command(),
             conversion::string::sub_command(),
+            // rust-by-example:expression
+            expression::sub_command(),
+
         ]);
 
     // clap matches
@@ -97,6 +100,8 @@ pub fn run(){
         Some((conversion::from_into::NAME, sub_matches)) => conversion::from_into::sub_handler(sub_matches),
         Some((conversion::try_from_try_into::NAME, sub_matches)) => conversion::try_from_try_into::sub_handler(sub_matches),
         Some((conversion::string::NAME, sub_matches)) => conversion::string::sub_handler(sub_matches),
+        // rust-by-example:expression
+        Some((expression::NAME, sub_matches)) => expression::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
