@@ -39,6 +39,7 @@ pub fn run(){
             custom_types::constants::sub_command(),
             // rust-by-example:variable_bindings
             variable_bindings::sub_command(),
+            variable_bindings::mutability::sub_command(),
         ]);
 
     // clap matches
@@ -69,6 +70,7 @@ pub fn run(){
         Some((custom_types::constants::NAME, sub_matches)) => custom_types::constants::sub_handler(sub_matches),
         // rust-by-example:variable_bindings
         Some((variable_bindings::NAME, sub_matches)) => variable_bindings::sub_handler(sub_matches),
+        Some((variable_bindings::mutability::NAME, sub_matches)) => variable_bindings::mutability::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
