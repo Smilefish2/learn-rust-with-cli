@@ -2,6 +2,7 @@ use clap::{App, ArgMatches};
 
 pub mod enum_use;
 pub mod c_like;
+pub mod testcase_linked_list;
 
 pub const NAME: &'static str = "rust-by-example:custom_types/enum";
 const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum.html";
@@ -22,7 +23,6 @@ enum 关键字允许创建一个从数个不同取值中选其一的枚举类型
 
 // 该属性用于隐藏对未使用代码的警告。
 #[allow(dead_code)]
-
 // 创建一个 `enum`（枚举）来对 web 事件分类。注意变量名和类型共同指定了 `enum`
 // 取值的种类：`PageLoad` 不等于 `PageUnload`，`KeyPress(char)` 不等于
 // `Paste(String)`。各个取值不同，互相独立。
