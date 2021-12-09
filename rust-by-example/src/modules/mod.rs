@@ -1,3 +1,5 @@
+pub mod visibility;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:mod";
