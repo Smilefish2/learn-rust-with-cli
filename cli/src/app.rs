@@ -75,6 +75,7 @@ pub fn run(){
             // rust-by-example:expression
             functions::sub_command(),
             functions::methods::sub_command(),
+            functions::closures::sub_command(),
         ]);
 
     // clap matches
@@ -141,6 +142,7 @@ pub fn run(){
         // rust-by-example:functions
         Some((functions::NAME, sub_matches)) => functions::sub_handler(sub_matches),
         Some((functions::methods::NAME, sub_matches)) => functions::methods::sub_handler(sub_matches),
+        Some((functions::closures::NAME, sub_matches)) => functions::closures::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
