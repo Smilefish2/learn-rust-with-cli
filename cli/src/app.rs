@@ -82,6 +82,7 @@ pub fn run(){
             functions::closures::input_functions::sub_command(),
             functions::closures::output_parameters::sub_command(),
             functions::closures::closure_examples::sub_command(),
+            functions::closures::closure_examples::iter_any::sub_command(),
         ]);
 
     // clap matches
@@ -155,6 +156,7 @@ pub fn run(){
         Some((functions::closures::input_functions::NAME, sub_matches)) => functions::closures::input_functions::sub_handler(sub_matches),
         Some((functions::closures::output_parameters::NAME, sub_matches)) => functions::closures::output_parameters::sub_handler(sub_matches),
         Some((functions::closures::closure_examples::NAME, sub_matches)) => functions::closures::closure_examples::sub_handler(sub_matches),
+        Some((functions::closures::closure_examples::iter_any::NAME, sub_matches)) => functions::closures::closure_examples::iter_any::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
