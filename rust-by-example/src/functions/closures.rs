@@ -3,6 +3,7 @@ pub mod input_parameters;
 pub mod anonymity;
 pub mod input_functions;
 pub mod output_parameters;
+pub mod closure_examples;
 
 use clap::{App, ArgMatches};
 
