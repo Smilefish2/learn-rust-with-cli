@@ -1,4 +1,5 @@
 pub mod capture;
+pub mod input_parameters;
 
 use clap::{App, ArgMatches};
 
