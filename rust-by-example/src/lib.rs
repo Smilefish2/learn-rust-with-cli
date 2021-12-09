@@ -10,6 +10,7 @@ pub mod flow_control;
 pub mod functions;
 pub mod modules;
 pub mod crates;
+pub mod cargo;
 
 
 

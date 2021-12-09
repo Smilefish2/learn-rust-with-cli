@@ -15,7 +15,7 @@ pub fn sub_command<'help>() -> App<'help> {
 编译 rary.rs
 */
 pub fn sub_handler(_matches :&ArgMatches){
-    println!("手动执行命令：cd rust-by-exampl/src/crates && rustc --crate-type=lib rary.rs && ls && cd ../../../";
+    println!("手动执行命令：cd rust-by-exampl/src/crates && rustc --crate-type=lib rary.rs && ls && cd ../../../");
 
     let current_dir = env::current_dir().unwrap();
     println!(
