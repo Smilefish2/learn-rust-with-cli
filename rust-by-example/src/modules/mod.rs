@@ -2,6 +2,7 @@ pub mod visibility;
 pub mod struct_visibility;
 pub mod uses;
 pub mod supers;
+pub mod split;
 
 use clap::{App, ArgMatches};
 
