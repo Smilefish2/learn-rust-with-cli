@@ -1,5 +1,6 @@
 pub mod methods;
 pub mod closures;
+pub mod hof;
 
 use clap::{App, ArgMatches};
 
