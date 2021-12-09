@@ -72,6 +72,9 @@ pub fn run(){
             flow_control::matchs::binding::sub_command(),
             flow_control::if_let::sub_command(),
             flow_control::while_let::sub_command(),
+            // rust-by-example:expression
+            functions::sub_command(),
+            functions::methods::sub_command(),
         ]);
 
     // clap matches
@@ -135,6 +138,9 @@ pub fn run(){
         Some((flow_control::matchs::binding::NAME, sub_matches)) => flow_control::matchs::binding::sub_handler(sub_matches),
         Some((flow_control::if_let::NAME, sub_matches)) => flow_control::if_let::sub_handler(sub_matches),
         Some((flow_control::while_let::NAME, sub_matches)) => flow_control::while_let::sub_handler(sub_matches),
+        // rust-by-example:functions
+        Some((functions::NAME, sub_matches)) => functions::sub_handler(sub_matches),
+        Some((functions::methods::NAME, sub_matches)) => functions::methods::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

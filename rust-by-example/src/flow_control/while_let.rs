@@ -12,9 +12,7 @@ pub fn sub_command<'help>() -> App<'help> {
 
 /**
 和 if let 类似，while let 也可以把别扭的 match 改写得好看一些。考虑下面这 段使 i 不断增加的代码：
-
-
- */
+*/
 
 pub fn sub_handler(_matches :&ArgMatches){
     // 将 `optional` 设为 `Option<i32>` 类型
@@ -39,6 +37,7 @@ pub fn sub_handler(_matches :&ArgMatches){
             // ^ 为什么必须写这样的语句呢？肯定有更优雅的处理方式！
         }
     }
+
 
     // 使用 while let 可以使这段代码变得更加优雅：
     // 将 `optional` 设为 `Option<i32>` 类型
