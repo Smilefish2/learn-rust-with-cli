@@ -86,6 +86,8 @@ pub fn run(){
             functions::closures::closure_examples::iter_find::sub_command(),
             functions::hof::sub_command(),
             functions::diverging::sub_command(),
+            // rust-by-example:modules
+            modules::sub_command(),
         ]);
 
     // clap matches
@@ -163,6 +165,8 @@ pub fn run(){
         Some((functions::closures::closure_examples::iter_find::NAME, sub_matches)) => functions::closures::closure_examples::iter_find::sub_handler(sub_matches),
         Some((functions::hof::NAME, sub_matches)) => functions::hof::sub_handler(sub_matches),
         Some((functions::diverging::NAME, sub_matches)) => functions::diverging::sub_handler(sub_matches),
+        // rust-by-example:modules
+        Some((modules::NAME, sub_matches)) => modules::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
