@@ -2,8 +2,8 @@ use std::{env};
 use std::process::Command;
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:crates/lib";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/crates/lib.html";
+pub const NAME: &'static str = "rust-by-example:crates/using_lib";
+const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/crates/using_lib.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -15,8 +15,7 @@ pub fn sub_command<'help>() -> App<'help> {
 编译 rary.rs
 */
 pub fn sub_handler(_matches :&ArgMatches){
-
-    println!("手动执行命令：cd rust-by-exampl/src/crates && rustc --crate-type=lib rary.rs && ls && cd ../../../");
+    println!("手动执行命令：cd rust-by-exampl/src/crates && rustc --crate-type=lib rary.rs && ls && cd ../../../";
 
     let current_dir = env::current_dir().unwrap();
     println!(
@@ -25,7 +24,7 @@ pub fn sub_handler(_matches :&ArgMatches){
     );
 
     let pwd = current_dir.into_os_string().into_string().unwrap();
-    let command = format!("cd {}/rust-by-example/src/crates && rustc --crate-type=lib rary.rs && ls", pwd);
+    let command = format!("cd {}/rust-by-example/src/crates && rustc executable.rs --extern rary=library.rlib --edition=2018 && ./executable", pwd);
 
     println!(
         "command = {}",
