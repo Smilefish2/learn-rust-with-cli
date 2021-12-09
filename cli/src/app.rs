@@ -101,6 +101,7 @@ pub fn run(){
             cargo::sub_command(),
             cargo::deps::sub_command(),
             cargo::conventions::sub_command(),
+            cargo::test::sub_command(),
         ]);
 
     // clap matches
@@ -192,6 +193,7 @@ pub fn run(){
         Some((cargo::NAME, sub_matches)) => cargo::sub_handler(sub_matches),
         Some((cargo::deps::NAME, sub_matches)) => cargo::deps::sub_handler(sub_matches),
         Some((cargo::conventions::NAME, sub_matches)) => cargo::conventions::sub_handler(sub_matches),
+        Some((cargo::test::NAME, sub_matches)) => cargo::test::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

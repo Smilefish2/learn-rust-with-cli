@@ -1,5 +1,6 @@
 pub mod deps;
 pub mod conventions;
+pub mod test;
 
 use clap::{App, ArgMatches};
 
