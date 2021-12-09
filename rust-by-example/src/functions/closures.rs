@@ -1,3 +1,5 @@
+pub mod capture;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:fn/closures";
