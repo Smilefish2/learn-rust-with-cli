@@ -89,6 +89,7 @@ pub fn run(){
             // rust-by-example:modules
             modules::sub_command(),
             modules::visibility::sub_command(),
+            modules::struct_visibility::sub_command(),
         ]);
 
     // clap matches
@@ -169,6 +170,7 @@ pub fn run(){
         // rust-by-example:modules
         Some((modules::NAME, sub_matches)) => modules::sub_handler(sub_matches),
         Some((modules::visibility::NAME, sub_matches)) => modules::visibility::sub_handler(sub_matches),
+        Some((modules::struct_visibility::NAME, sub_matches)) => modules::struct_visibility::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
