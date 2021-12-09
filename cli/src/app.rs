@@ -99,6 +99,7 @@ pub fn run(){
             crates::using_lib::sub_command(),
             // rust-by-example:cargo
             cargo::sub_command(),
+            cargo::deps::sub_command(),
         ]);
 
     // clap matches
@@ -188,6 +189,7 @@ pub fn run(){
         Some((crates::using_lib::NAME, sub_matches)) => crates::using_lib::sub_handler(sub_matches),
         // rust-by-example:cargo
         Some((cargo::NAME, sub_matches)) => cargo::sub_handler(sub_matches),
+        Some((cargo::deps::NAME, sub_matches)) => cargo::deps::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
