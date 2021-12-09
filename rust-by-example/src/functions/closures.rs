@@ -1,5 +1,6 @@
 pub mod capture;
 pub mod input_parameters;
+pub mod anonymity;
 
 use clap::{App, ArgMatches};
 
