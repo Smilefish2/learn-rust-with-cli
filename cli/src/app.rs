@@ -93,6 +93,8 @@ pub fn run(){
             modules::uses::sub_command(),
             modules::supers::sub_command(),
             modules::split::sub_command(),
+            // rust-by-example:crates
+            crates::sub_command(),
         ]);
 
     // clap matches
@@ -177,6 +179,7 @@ pub fn run(){
         Some((modules::uses::NAME, sub_matches)) => modules::uses::sub_handler(sub_matches),
         Some((modules::supers::NAME, sub_matches)) => modules::supers::sub_handler(sub_matches),
         Some((modules::split::NAME, sub_matches)) => modules::split::sub_handler(sub_matches),
+        Some((crates::NAME, sub_matches)) => crates::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
