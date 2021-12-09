@@ -1,4 +1,5 @@
 pub mod iter_any;
+pub mod iter_find;
 
 use clap::{App, ArgMatches};
 
