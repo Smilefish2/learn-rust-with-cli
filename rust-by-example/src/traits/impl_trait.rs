@@ -18,6 +18,7 @@ use std::vec::IntoIter;
 
 // 该函数组合了两个 `Vec <i32>` 并在其上返回一个迭代器。
 // 看看它的返回类型多么复杂！
+#[allow(dead_code)]
 fn combine_vecs_explicit_return_type(
     v: Vec<i32>,
     u: Vec<i32>,
@@ -46,6 +47,7 @@ fn make_adder_function(y: i32) -> impl Fn(i32) -> i32 {
 
 // 您还可以使用 impl Trait 返回使用 map 或 filter 闭包的迭代器！这使得使用 map 和 filter 更容易。
 // 因为闭包类型没有名称，所以如果函数返回带闭包的迭代器，则无法写出显式的返回类型。但是有了 impl Trait，你就可以轻松地做到这一点：
+#[allow(dead_code)]
 fn double_positives<'a>(numbers: &'a Vec<i32>) -> impl Iterator<Item = i32> + 'a {
     numbers
         .iter()

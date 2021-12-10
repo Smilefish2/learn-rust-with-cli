@@ -4,6 +4,7 @@ pub mod ops;
 pub mod drop;
 pub mod iter;
 pub mod impl_trait;
+pub mod clone;
 
 
 use clap::{App, ArgMatches};
