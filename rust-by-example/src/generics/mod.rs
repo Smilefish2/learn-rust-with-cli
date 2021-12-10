@@ -1,4 +1,5 @@
 pub mod gen_fn;
+pub mod impls;
 
 use clap::{App, ArgMatches};
 
