@@ -6,6 +6,7 @@ pub mod traits;
 pub mod lifetime_bounds;
 pub mod lifetime_coercion;
 pub mod static_lifetime;
+pub mod elision;
 
 use clap::{App, ArgMatches};
 
