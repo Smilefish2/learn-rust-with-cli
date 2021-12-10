@@ -2,6 +2,7 @@ pub mod derive;
 pub mod dyns;
 pub mod ops;
 pub mod drop;
+pub mod iter;
 
 
 use clap::{App, ArgMatches};
