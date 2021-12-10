@@ -5,6 +5,7 @@ pub mod bounds;
 pub mod multi_bounds;
 pub mod wheres;
 pub mod new_types;
+pub mod assoc_items;
 
 use clap::{App, ArgMatches};
 

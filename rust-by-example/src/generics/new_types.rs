@@ -10,40 +10,18 @@ pub fn sub_command<'help>() -> App<'help> {
 }
 
 /**
-new type 惯用法
-    newtype 惯用法（译注：即为不同种类的数据分别定义新的类型）能保证在编译时，提供 给程序的都是正确的类型。
+“关联项”（associated item）指与多种类型的项有关的一组规则。它是 trait 泛型的扩展，允许在 trait 内部定义新的项。
 
-    比如说，实现一个 “年龄认证” 函数，它要求输入必须是 Years 类型。
+一个这样的项就叫做一个关联类型。当 trait 对于实现了它的容器类型是泛型的，关联 项就提供了简单的使用方法。
+
+译注：「关联项」这个说法实际上只在 RFC 里出现了，官方的《The Rust Programming Language》第一版和第二版都只有「关联类型」的说法。
+如果觉得这里的说法很别扭的话 不要理会就是了。
+TRPL 对关联类型的定义是：「一种将类型占位符与 trait 联系起来的 做法，这样 trait 中的方法签名中就可以使用这些占位符类型。
+trait 的实现会指定在 该实现中那些占位符对应什么具体类型。」等看完这一节再回头看这个定义就很明白了。
  */
 
-struct Years(i64);
 
-struct Days(i64);
-
-impl Years {
-    pub fn to_days(&self) -> Days {
-        Days(self.0 * 365)
-    }
-}
-
-
-impl Days {
-    /// 舍去不满一年的部分
-    pub fn to_years(&self) -> Years {
-        Years(self.0 / 365)
-    }
-}
-
-fn old_enough(age: &Years) -> bool {
-    age.0 >= 18
-}
 
 pub fn sub_handler(_matches :&ArgMatches){
-    let age = Years(5);
-    let age_days = age.to_days();
-    println!("Old enough {}", old_enough(&age));
-    println!("Old enough {}", old_enough(&age_days.to_years()));
-    // println!("Old enough {}", old_enough(&age_days));
 
-    // 取消最后一行的注释，就可以发现提供给 old_enough 的必须是 Years 类型。
 }
