@@ -132,6 +132,7 @@ pub fn run(){
             scope::borrow::sub_command(),
             scope::borrow::mutability::sub_command(),
             scope::borrow::alias::sub_command(),
+            scope::borrow::ref_pattern::sub_command(),
         ]);
 
     // clap matches
@@ -254,6 +255,7 @@ pub fn run(){
         Some((scope::borrow::NAME, sub_matches)) => scope::borrow::sub_handler(sub_matches),
         Some((scope::borrow::mutability::NAME, sub_matches)) => scope::borrow::mutability::sub_handler(sub_matches),
         Some((scope::borrow::alias::NAME, sub_matches)) => scope::borrow::alias::sub_handler(sub_matches),
+        Some((scope::borrow::ref_pattern::NAME, sub_matches)) => scope::borrow::ref_pattern::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

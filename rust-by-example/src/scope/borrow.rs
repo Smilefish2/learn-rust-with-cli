@@ -1,5 +1,6 @@
 pub mod mutability;
 pub mod alias;
+pub mod ref_pattern;
 
 use clap::{App, ArgMatches};
 
