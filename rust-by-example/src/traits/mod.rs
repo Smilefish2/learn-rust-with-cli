@@ -5,6 +5,7 @@ pub mod drop;
 pub mod iter;
 pub mod impl_trait;
 pub mod clone;
+pub mod supertraits;
 
 
 use clap::{App, ArgMatches};
