@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:raii";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/raii.html";
+pub const NAME: &'static str = "rust-by-example:scope/raii";
+const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/scope/raii.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -81,6 +81,6 @@ pub fn sub_handler(_matches :&ArgMatches){
         }
     }
 
-    let x = ToDrop;
+    let _x = ToDrop;
     println!("Made a ToDrop!");
 }

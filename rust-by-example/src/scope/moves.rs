@@ -1,7 +1,9 @@
+pub mod mutability;
+
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:move";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/move.html";
+pub const NAME: &'static str = "rust-by-example:scope/move";
+const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/scope/move.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
