@@ -1,6 +1,7 @@
 pub mod syntax;
 pub mod dry;
 pub mod dsl;
+pub mod variadics;
 
 use clap::{App, ArgMatches};
 
