@@ -136,6 +136,7 @@ pub fn run(){
             scope::lifetime::sub_command(),
             scope::lifetime::explicit::sub_command(),
             scope::lifetime::functions::sub_command(),
+            scope::lifetime::methods::sub_command(),
         ]);
 
     // clap matches
@@ -262,6 +263,7 @@ pub fn run(){
         Some((scope::lifetime::NAME, sub_matches)) => scope::lifetime::sub_handler(sub_matches),
         Some((scope::lifetime::explicit::NAME, sub_matches)) => scope::lifetime::explicit::sub_handler(sub_matches),
         Some((scope::lifetime::functions::NAME, sub_matches)) => scope::lifetime::functions::sub_handler(sub_matches),
+        Some((scope::lifetime::methods::NAME, sub_matches)) => scope::lifetime::methods::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
