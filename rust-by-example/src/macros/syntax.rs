@@ -1,4 +1,4 @@
-// pub mod visibility;
+pub mod designators;
 
 use clap::{App, ArgMatches};
 
