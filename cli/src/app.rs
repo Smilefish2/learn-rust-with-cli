@@ -146,6 +146,7 @@ pub fn run(){
             // rust-by-example:traits
             traits::sub_command(),
             traits::derive::sub_command(),
+            traits::dyns::sub_command(),
         ]);
 
     // clap matches
@@ -282,6 +283,7 @@ pub fn run(){
         // rust-by-example:traits
         Some((traits::NAME, sub_matches)) => traits::sub_handler(sub_matches),
         Some((traits::derive::NAME, sub_matches)) => traits::derive::sub_handler(sub_matches),
+        Some((traits::dyns::NAME, sub_matches)) => traits::dyns::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
