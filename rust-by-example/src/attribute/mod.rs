@@ -1,4 +1,4 @@
-// pub mod deps;
+pub mod unused;
 
 use clap::{App, ArgMatches};
 

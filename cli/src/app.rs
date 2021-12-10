@@ -105,6 +105,7 @@ pub fn run(){
             cargo::build_scripts::sub_command(),
             // rust-by-example:attribute
             attribute::sub_command(),
+            attribute::unused::sub_command(),
         ]);
 
     // clap matches
@@ -200,6 +201,7 @@ pub fn run(){
         Some((cargo::build_scripts::NAME, sub_matches)) => cargo::build_scripts::sub_handler(sub_matches),
         // rust-by-example:attribute
         Some((attribute::NAME, sub_matches)) => attribute::sub_handler(sub_matches),
+        Some((attribute::unused::NAME, sub_matches)) => attribute::unused::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
