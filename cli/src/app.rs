@@ -116,6 +116,7 @@ pub fn run(){
             generics::bounds::sub_command(),
             generics::bounds::testcase_empty::sub_command(),
             generics::multi_bounds::sub_command(),
+            generics::wheres::sub_command(),
         ]);
 
     // clap matches
@@ -222,6 +223,7 @@ pub fn run(){
         Some((generics::bounds::NAME, sub_matches)) => generics::bounds::sub_handler(sub_matches),
         Some((generics::bounds::testcase_empty::NAME, sub_matches)) => generics::bounds::testcase_empty::sub_handler(sub_matches),
         Some((generics::multi_bounds::NAME, sub_matches)) => generics::multi_bounds::sub_handler(sub_matches),
+        Some((generics::wheres::NAME, sub_matches)) => generics::wheres::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
