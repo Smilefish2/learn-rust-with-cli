@@ -141,6 +141,7 @@ pub fn run(){
             scope::lifetime::traits::sub_command(),
             scope::lifetime::lifetime_bounds::sub_command(),
             scope::lifetime::lifetime_coercion::sub_command(),
+            scope::lifetime::static_lifetime::sub_command(),
         ]);
 
     // clap matches
@@ -272,6 +273,7 @@ pub fn run(){
         Some((scope::lifetime::traits::NAME, sub_matches)) => scope::lifetime::traits::sub_handler(sub_matches),
         Some((scope::lifetime::lifetime_bounds::NAME, sub_matches)) => scope::lifetime::lifetime_bounds::sub_handler(sub_matches),
         Some((scope::lifetime::lifetime_coercion::NAME, sub_matches)) => scope::lifetime::lifetime_coercion::sub_handler(sub_matches),
+        Some((scope::lifetime::static_lifetime::NAME, sub_matches)) => scope::lifetime::static_lifetime::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

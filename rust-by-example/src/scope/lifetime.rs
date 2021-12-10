@@ -5,6 +5,7 @@ pub mod structs;
 pub mod traits;
 pub mod lifetime_bounds;
 pub mod lifetime_coercion;
+pub mod static_lifetime;
 
 use clap::{App, ArgMatches};
 
