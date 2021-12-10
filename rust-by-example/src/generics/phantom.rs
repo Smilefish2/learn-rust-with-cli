@@ -1,3 +1,5 @@
+pub mod testcase_units;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:generics/phantom";

@@ -122,6 +122,7 @@ pub fn run(){
             generics::assoc_items::the_problem::sub_command(),
             generics::assoc_items::types::sub_command(),
             generics::phantom::sub_command(),
+            generics::phantom::testcase_units::sub_command(),
         ]);
 
     // clap matches
@@ -234,6 +235,7 @@ pub fn run(){
         Some((generics::assoc_items::the_problem::NAME, sub_matches)) => generics::assoc_items::the_problem::sub_handler(sub_matches),
         Some((generics::assoc_items::types::NAME, sub_matches)) => generics::assoc_items::types::sub_handler(sub_matches),
         Some((generics::phantom::NAME, sub_matches)) => generics::phantom::sub_handler(sub_matches),
+        Some((generics::phantom::testcase_units::NAME, sub_matches)) => generics::phantom::testcase_units::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
