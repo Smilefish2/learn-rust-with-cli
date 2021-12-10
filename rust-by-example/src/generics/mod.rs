@@ -1,4 +1,4 @@
-// pub mod generics;
+pub mod gen_fn;
 
 use clap::{App, ArgMatches};
 

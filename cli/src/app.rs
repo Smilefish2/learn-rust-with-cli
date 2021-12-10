@@ -110,6 +110,7 @@ pub fn run(){
             attribute::cfg::custom::sub_command(),
             // rust-by-example:generics
             generics::sub_command(),
+            generics::gen_fn::sub_command(),
         ]);
 
     // clap matches
@@ -210,6 +211,7 @@ pub fn run(){
         Some((attribute::cfg::custom::NAME, sub_matches)) => attribute::cfg::custom::sub_handler(sub_matches),
         // rust-by-example:generics
         Some((generics::NAME, sub_matches)) => generics::sub_handler(sub_matches),
+        Some((generics::gen_fn::NAME, sub_matches)) => generics::gen_fn::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
