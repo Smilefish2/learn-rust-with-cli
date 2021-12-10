@@ -1,4 +1,5 @@
 pub mod mutability;
+pub mod partial_move;
 
 use clap::{App, ArgMatches};
 
