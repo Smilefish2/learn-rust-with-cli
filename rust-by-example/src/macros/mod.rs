@@ -1,9 +1,9 @@
-// pub mod visibility;
+pub mod syntax;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:mod";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/mod.html";
+pub const NAME: &'static str = "rust-by-example:macros";
+const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/macros.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -32,7 +32,7 @@ macro_rules! say_hello {
     // `()` 表示此宏不接受任何参数。
     () => (
         // 此宏将会展开成这个代码块里面的内容。
-        println!("Hello!");
+        println!("Hello!")
     )
 }
 pub fn sub_handler(_matches :&ArgMatches) {
