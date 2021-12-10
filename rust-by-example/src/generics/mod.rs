@@ -4,6 +4,7 @@ pub mod gen_trait;
 pub mod bounds;
 pub mod multi_bounds;
 pub mod wheres;
+pub mod new_types;
 
 use clap::{App, ArgMatches};
 
