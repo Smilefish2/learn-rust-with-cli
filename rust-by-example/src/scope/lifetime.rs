@@ -1,4 +1,5 @@
 pub mod explicit;
+pub mod functions;
 
 use clap::{App, ArgMatches};
 
