@@ -1,4 +1,5 @@
 pub mod unused;
+pub mod cfg;
 
 use clap::{App, ArgMatches};
 

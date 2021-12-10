@@ -106,6 +106,7 @@ pub fn run(){
             // rust-by-example:attribute
             attribute::sub_command(),
             attribute::unused::sub_command(),
+            attribute::cfg::sub_command(),
         ]);
 
     // clap matches
@@ -202,6 +203,7 @@ pub fn run(){
         // rust-by-example:attribute
         Some((attribute::NAME, sub_matches)) => attribute::sub_handler(sub_matches),
         Some((attribute::unused::NAME, sub_matches)) => attribute::unused::sub_handler(sub_matches),
+        Some((attribute::cfg::NAME, sub_matches)) => attribute::cfg::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
