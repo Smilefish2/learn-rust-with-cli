@@ -1,4 +1,6 @@
 pub mod designators;
+pub mod overload;
+pub mod repeat;
 
 use clap::{App, ArgMatches};
 
