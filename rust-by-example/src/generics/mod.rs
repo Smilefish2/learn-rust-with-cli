@@ -2,6 +2,7 @@ pub mod gen_fn;
 pub mod impls;
 pub mod gen_trait;
 pub mod bounds;
+pub mod multi_bounds;
 
 use clap::{App, ArgMatches};
 
