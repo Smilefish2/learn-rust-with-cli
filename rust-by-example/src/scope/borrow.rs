@@ -1,4 +1,5 @@
 pub mod mutability;
+pub mod alias;
 
 use clap::{App, ArgMatches};
 
