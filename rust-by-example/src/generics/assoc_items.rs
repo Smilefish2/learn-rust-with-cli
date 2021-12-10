@@ -1,3 +1,6 @@
+pub mod the_problem;
+pub mod types;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:generics/assoc_items";
