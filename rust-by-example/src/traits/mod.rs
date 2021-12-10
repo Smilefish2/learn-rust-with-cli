@@ -3,6 +3,7 @@ pub mod dyns;
 pub mod ops;
 pub mod drop;
 pub mod iter;
+pub mod impl_trait;
 
 
 use clap::{App, ArgMatches};

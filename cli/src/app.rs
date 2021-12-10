@@ -150,6 +150,7 @@ pub fn run(){
             traits::ops::sub_command(),
             traits::drop::sub_command(),
             traits::iter::sub_command(),
+            traits::impl_trait::sub_command(),
         ]);
 
     // clap matches
@@ -290,6 +291,7 @@ pub fn run(){
         Some((traits::ops::NAME, sub_matches)) => traits::ops::sub_handler(sub_matches),
         Some((traits::drop::NAME, sub_matches)) => traits::drop::sub_handler(sub_matches),
         Some((traits::iter::NAME, sub_matches)) => traits::iter::sub_handler(sub_matches),
+        Some((traits::impl_trait::NAME, sub_matches)) => traits::impl_trait::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
