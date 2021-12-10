@@ -29,4 +29,6 @@ pub fn sub_handler(_matches :&ArgMatches){
 
     owner.add_one();
     owner.print();
+
+    // 译注：方法一般是不需要标明生命周期的，因为 self 的生命周期会赋给所有的输出 生命周期参数，详见 TRPL。
 }
