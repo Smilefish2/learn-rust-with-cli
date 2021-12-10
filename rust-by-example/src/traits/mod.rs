@@ -1,6 +1,7 @@
 pub mod derive;
 pub mod dyns;
 pub mod ops;
+pub mod drop;
 
 
 use clap::{App, ArgMatches};
