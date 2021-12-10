@@ -160,6 +160,7 @@ pub fn run(){
             macros::syntax::designators::sub_command(),
             macros::syntax::overload::sub_command(),
             macros::syntax::repeat::sub_command(),
+            macros::dry::sub_command(),
         ]);
 
     // clap matches
@@ -310,6 +311,7 @@ pub fn run(){
         Some((macros::syntax::designators::NAME, sub_matches)) => macros::syntax::designators::sub_handler(sub_matches),
         Some((macros::syntax::overload::NAME, sub_matches)) => macros::syntax::overload::sub_handler(sub_matches),
         Some((macros::syntax::repeat::NAME, sub_matches)) => macros::syntax::repeat::sub_handler(sub_matches),
+        Some((macros::dry::NAME, sub_matches)) => macros::dry::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
