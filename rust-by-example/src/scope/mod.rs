@@ -1,5 +1,6 @@
 pub mod raii;
 pub mod moves;
+pub mod borrow;
 
 use clap::{App, ArgMatches};
 
