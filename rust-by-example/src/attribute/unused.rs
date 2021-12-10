@@ -30,4 +30,6 @@ pub fn sub_handler(_matches :&ArgMatches){
     fn main() {
         used_function();
     }
+
+    println!("参见：{}", "https://rustwiki.org/zh-CN/rust-by-example/attribute/unused.html");
 }
