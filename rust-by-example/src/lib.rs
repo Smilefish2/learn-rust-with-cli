@@ -11,6 +11,7 @@ pub mod functions;
 pub mod modules;
 pub mod crates;
 pub mod cargo;
+pub mod attribute;
 
 
 
