@@ -6,6 +6,7 @@ pub mod iter;
 pub mod impl_trait;
 pub mod clone;
 pub mod supertraits;
+pub mod disambiguating;
 
 
 use clap::{App, ArgMatches};

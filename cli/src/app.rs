@@ -153,6 +153,7 @@ pub fn run(){
             traits::impl_trait::sub_command(),
             traits::clone::sub_command(),
             traits::supertraits::sub_command(),
+            traits::disambiguating::sub_command(),
         ]);
 
     // clap matches
@@ -296,6 +297,7 @@ pub fn run(){
         Some((traits::impl_trait::NAME, sub_matches)) => traits::impl_trait::sub_handler(sub_matches),
         Some((traits::clone::NAME, sub_matches)) => traits::clone::sub_handler(sub_matches),
         Some((traits::supertraits::NAME, sub_matches)) => traits::supertraits::sub_handler(sub_matches),
+        Some((traits::disambiguating::NAME, sub_matches)) => traits::supertraits::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
