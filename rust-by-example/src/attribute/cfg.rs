@@ -1,4 +1,4 @@
-// pub mod deps;
+pub mod custom;
 
 use clap::{App, ArgMatches};
 
