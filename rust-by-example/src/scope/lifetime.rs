@@ -2,6 +2,7 @@ pub mod explicit;
 pub mod functions;
 pub mod methods;
 pub mod structs;
+pub mod traits;
 
 use clap::{App, ArgMatches};
 
