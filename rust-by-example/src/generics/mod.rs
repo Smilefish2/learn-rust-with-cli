@@ -6,6 +6,7 @@ pub mod multi_bounds;
 pub mod wheres;
 pub mod new_types;
 pub mod assoc_items;
+pub mod phantom;
 
 use clap::{App, ArgMatches};
 
