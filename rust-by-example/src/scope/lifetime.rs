@@ -3,6 +3,7 @@ pub mod functions;
 pub mod methods;
 pub mod structs;
 pub mod traits;
+pub mod lifetime_bounds;
 
 use clap::{App, ArgMatches};
 
