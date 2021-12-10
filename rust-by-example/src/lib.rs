@@ -14,6 +14,7 @@ pub mod cargo;
 pub mod attribute;
 pub mod generics;
 pub mod scope;
+pub mod traits;
 
 
 

@@ -143,6 +143,8 @@ pub fn run(){
             scope::lifetime::lifetime_coercion::sub_command(),
             scope::lifetime::static_lifetime::sub_command(),
             scope::lifetime::elision::sub_command(),
+            // rust-by-example:traits
+            traits::sub_command(),
         ]);
 
     // clap matches
@@ -276,6 +278,8 @@ pub fn run(){
         Some((scope::lifetime::lifetime_coercion::NAME, sub_matches)) => scope::lifetime::lifetime_coercion::sub_handler(sub_matches),
         Some((scope::lifetime::static_lifetime::NAME, sub_matches)) => scope::lifetime::static_lifetime::sub_handler(sub_matches),
         Some((scope::lifetime::elision::NAME, sub_matches)) => scope::lifetime::elision::sub_handler(sub_matches),
+        // rust-by-example:traits
+        Some((traits::NAME, sub_matches)) => traits::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
