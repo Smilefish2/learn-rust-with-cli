@@ -1,4 +1,5 @@
 pub mod raii;
+pub mod moves;
 
 use clap::{App, ArgMatches};
 

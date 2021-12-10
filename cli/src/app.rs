@@ -126,6 +126,7 @@ pub fn run(){
             // rust-by-example:scope
             scope::sub_command(),
             scope::raii::sub_command(),
+            scope::moves::sub_command(),
         ]);
 
     // clap matches
@@ -242,6 +243,7 @@ pub fn run(){
         // rust-by-example:scope
         Some((scope::NAME, sub_matches)) => scope::sub_handler(sub_matches),
         Some((scope::raii::NAME, sub_matches)) => scope::raii::sub_handler(sub_matches),
+        Some((scope::moves::NAME, sub_matches)) => scope::moves::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
