@@ -112,6 +112,7 @@ pub fn run(){
             generics::sub_command(),
             generics::gen_fn::sub_command(),
             generics::impls::sub_command(),
+            generics::gen_trait::sub_command(),
         ]);
 
     // clap matches
@@ -214,6 +215,7 @@ pub fn run(){
         Some((generics::NAME, sub_matches)) => generics::sub_handler(sub_matches),
         Some((generics::gen_fn::NAME, sub_matches)) => generics::gen_fn::sub_handler(sub_matches),
         Some((generics::impls::NAME, sub_matches)) => generics::impls::sub_handler(sub_matches),
+        Some((generics::gen_trait::NAME, sub_matches)) => generics::gen_trait::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

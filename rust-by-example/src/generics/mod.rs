@@ -1,5 +1,6 @@
 pub mod gen_fn;
 pub mod impls;
+pub mod gen_trait;
 
 use clap::{App, ArgMatches};
 
