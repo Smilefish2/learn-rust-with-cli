@@ -154,6 +154,8 @@ pub fn run(){
             traits::clone::sub_command(),
             traits::supertraits::sub_command(),
             traits::disambiguating::sub_command(),
+            // rust-by-example:macros
+            macros::sub_command(),
         ]);
 
     // clap matches
@@ -298,6 +300,8 @@ pub fn run(){
         Some((traits::clone::NAME, sub_matches)) => traits::clone::sub_handler(sub_matches),
         Some((traits::supertraits::NAME, sub_matches)) => traits::supertraits::sub_handler(sub_matches),
         Some((traits::disambiguating::NAME, sub_matches)) => traits::supertraits::sub_handler(sub_matches),
+        // rust-by-example:macros
+        Some((macros::NAME, sub_matches)) => macros::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
