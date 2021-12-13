@@ -184,6 +184,7 @@ pub fn run(){
             error::iter_result::sub_command(),
             // rust-by-example:std
             std::sub_command(),
+            std::boxs::sub_command(),
 
         ]);
 
@@ -359,6 +360,7 @@ pub fn run(){
         Some((error::iter_result::NAME, sub_matches)) => error::iter_result::sub_handler(sub_matches),
         // rust-by-example:std
         Some((std::NAME, sub_matches)) => std::sub_handler(sub_matches),
+        Some((std::boxs::NAME, sub_matches)) => std::boxs::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
