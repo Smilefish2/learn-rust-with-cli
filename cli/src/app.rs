@@ -191,6 +191,7 @@ pub fn run(){
             std::result::sub_command(),
             std::result::question_mark::sub_command(),
             std::panic::sub_command(),
+            std::hash::sub_command(),
 
         ]);
 
@@ -373,6 +374,7 @@ pub fn run(){
         Some((std::result::NAME, sub_matches)) => std::result::sub_handler(sub_matches),
         Some((std::result::question_mark::NAME, sub_matches)) => std::result::question_mark::sub_handler(sub_matches),
         Some((std::panic::NAME, sub_matches)) => std::panic::sub_handler(sub_matches),
+        Some((std::hash::NAME, sub_matches)) => std::hash::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

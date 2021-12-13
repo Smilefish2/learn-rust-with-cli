@@ -4,6 +4,7 @@ pub mod strs;
 pub mod option;
 pub mod result;
 pub mod panic;
+pub mod hash;
 
 use clap::{App, ArgMatches};
 
