@@ -1,3 +1,5 @@
+pub mod question_mark;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:std/result";

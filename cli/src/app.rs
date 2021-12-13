@@ -189,6 +189,7 @@ pub fn run(){
             std::strs::sub_command(),
             std::option::sub_command(),
             std::result::sub_command(),
+            std::result::question_mark::sub_command(),
 
         ]);
 
@@ -369,6 +370,7 @@ pub fn run(){
         Some((std::strs::NAME, sub_matches)) => std::strs::sub_handler(sub_matches),
         Some((std::option::NAME, sub_matches)) => std::option::sub_handler(sub_matches),
         Some((std::result::NAME, sub_matches)) => std::result::sub_handler(sub_matches),
+        Some((std::result::question_mark::NAME, sub_matches)) => std::result::question_mark::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
