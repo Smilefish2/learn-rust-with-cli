@@ -175,6 +175,7 @@ pub fn run(){
             error::result::result_alias::sub_command(),
             error::result::early_returns::sub_command(),
             error::result::enter_question_mark::sub_command(),
+            error::multiple_error_types::sub_command(),
         ]);
 
     // clap matches
@@ -340,6 +341,7 @@ pub fn run(){
         Some((error::result::result_alias::NAME, sub_matches)) => error::result::result_alias::sub_handler(sub_matches),
         Some((error::result::early_returns::NAME, sub_matches)) => error::result::early_returns::sub_handler(sub_matches),
         Some((error::result::enter_question_mark::NAME, sub_matches)) => error::result::enter_question_mark::sub_handler(sub_matches),
+        Some((error::multiple_error_types::NAME, sub_matches)) => error::multiple_error_types::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
