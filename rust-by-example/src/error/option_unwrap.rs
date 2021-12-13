@@ -1,3 +1,6 @@
+pub mod question_mark;
+pub mod map;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:error/option_unwrap";
