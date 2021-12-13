@@ -187,6 +187,7 @@ pub fn run(){
             std::boxs::sub_command(),
             std::vec::sub_command(),
             std::strs::sub_command(),
+            std::option::sub_command(),
 
         ]);
 
@@ -365,6 +366,7 @@ pub fn run(){
         Some((std::boxs::NAME, sub_matches)) => std::boxs::sub_handler(sub_matches),
         Some((std::vec::NAME, sub_matches)) => std::vec::sub_handler(sub_matches),
         Some((std::strs::NAME, sub_matches)) => std::strs::sub_handler(sub_matches),
+        Some((std::option::NAME, sub_matches)) => std::option::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

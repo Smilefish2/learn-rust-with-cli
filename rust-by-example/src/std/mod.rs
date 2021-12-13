@@ -1,6 +1,7 @@
 pub mod boxs;
 pub mod vec;
 pub mod strs;
+pub mod option;
 
 use clap::{App, ArgMatches};
 
