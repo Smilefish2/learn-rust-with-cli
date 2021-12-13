@@ -1,4 +1,5 @@
 pub mod alt_key_types;
+pub mod hashset;
 
 use clap::{App, ArgMatches};
 
