@@ -1,4 +1,5 @@
 pub mod result_map;
+pub mod result_alias;
 
 use clap::{App, ArgMatches};
 

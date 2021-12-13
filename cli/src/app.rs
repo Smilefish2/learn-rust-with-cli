@@ -172,6 +172,7 @@ pub fn run(){
             error::option_unwrap::and_then::sub_command(),
             error::result::sub_command(),
             error::result::result_map::sub_command(),
+            error::result::result_alias::sub_command(),
         ]);
 
     // clap matches
@@ -334,6 +335,7 @@ pub fn run(){
         Some((error::option_unwrap::and_then::NAME, sub_matches)) => error::option_unwrap::and_then::sub_handler(sub_matches),
         Some((error::result::NAME, sub_matches)) => error::result::sub_handler(sub_matches),
         Some((error::result::result_map::NAME, sub_matches)) => error::result::result_map::sub_handler(sub_matches),
+        Some((error::result::result_alias::NAME, sub_matches)) => error::result::result_alias::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
