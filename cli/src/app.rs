@@ -194,6 +194,7 @@ pub fn run(){
             std::hash::sub_command(),
             std::hash::alt_key_types::sub_command(),
             std::hash::hashset::sub_command(),
+            std::rc::sub_command(),
 
         ]);
 
@@ -379,6 +380,7 @@ pub fn run(){
         Some((std::hash::NAME, sub_matches)) => std::hash::sub_handler(sub_matches),
         Some((std::hash::alt_key_types::NAME, sub_matches)) => std::hash::alt_key_types::sub_handler(sub_matches),
         Some((std::hash::hashset::NAME, sub_matches)) => std::hash::hashset::sub_handler(sub_matches),
+        Some((std::rc::NAME, sub_matches)) => std::rc::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
