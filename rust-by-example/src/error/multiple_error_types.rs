@@ -1,5 +1,6 @@
 pub mod option_result;
 pub mod define_error_type;
+pub mod boxing_errors;
 
 
 use clap::{App, ArgMatches};
