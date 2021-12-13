@@ -166,6 +166,7 @@ pub fn run(){
             // rust-by-example:error
             error::sub_command(),
             error::panics::sub_command(),
+            error::option_unwrap::sub_command(),
         ]);
 
     // clap matches
@@ -322,6 +323,7 @@ pub fn run(){
         // rust-by-example:error
         Some((error::NAME, sub_matches)) => error::sub_handler(sub_matches),
         Some((error::panics::NAME, sub_matches)) => error::panics::sub_handler(sub_matches),
+        Some((error::option_unwrap::NAME, sub_matches)) => error::option_unwrap::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

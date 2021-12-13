@@ -1,4 +1,5 @@
 pub mod panics;
+pub mod option_unwrap;
 
 use clap::{App, ArgMatches};
 
