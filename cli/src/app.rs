@@ -163,6 +163,8 @@ pub fn run(){
             macros::dry::sub_command(),
             macros::dsl::sub_command(),
             macros::variadics::sub_command(),
+            // rust-by-example:error
+            error::sub_command(),
         ]);
 
     // clap matches
@@ -316,6 +318,8 @@ pub fn run(){
         Some((macros::dry::NAME, sub_matches)) => macros::dry::sub_handler(sub_matches),
         Some((macros::dsl::NAME, sub_matches)) => macros::dsl::sub_handler(sub_matches),
         Some((macros::variadics::NAME, sub_matches)) => macros::variadics::sub_handler(sub_matches),
+        // rust-by-example:error
+        Some((error::NAME, sub_matches)) => error::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
