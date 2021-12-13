@@ -1,4 +1,5 @@
 pub mod option_result;
+pub mod define_error_type;
 
 
 use clap::{App, ArgMatches};
