@@ -3,6 +3,7 @@ pub mod vec;
 pub mod strs;
 pub mod option;
 pub mod result;
+pub mod panic;
 
 use clap::{App, ArgMatches};
 
