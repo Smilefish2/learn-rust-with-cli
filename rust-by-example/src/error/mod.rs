@@ -2,6 +2,7 @@ pub mod panics;
 pub mod option_unwrap;
 pub mod result;
 pub mod multiple_error_types;
+pub mod iter_result;
 
 use clap::{App, ArgMatches};
 
