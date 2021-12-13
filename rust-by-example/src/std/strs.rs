@@ -132,6 +132,7 @@ pub fn sub_handler(_matches :&ArgMatches){
 
     let quotes = br#"You can also use "fancier" formatting, \
                     like with normal raw strings"#;
+    println!("{:?}", quotes);
 
     // 字节串可以不使用 UTF-8 编码
     let shift_jis = b"\x82\xe6\x82\xa8\x82\xb1\x82"; // SHIFT-JIS 编码的 "ようこそ"

@@ -2,6 +2,7 @@ pub mod boxs;
 pub mod vec;
 pub mod strs;
 pub mod option;
+pub mod result;
 
 use clap::{App, ArgMatches};
 
