@@ -182,6 +182,9 @@ pub fn run(){
             error::multiple_error_types::reenter_question_mark::sub_command(),
             error::multiple_error_types::wrap_error::sub_command(),
             error::iter_result::sub_command(),
+            // rust-by-example:std
+            std::sub_command(),
+
         ]);
 
     // clap matches
@@ -354,6 +357,8 @@ pub fn run(){
         Some((error::multiple_error_types::reenter_question_mark::NAME, sub_matches)) => error::multiple_error_types::reenter_question_mark::sub_handler(sub_matches),
         Some((error::multiple_error_types::wrap_error::NAME, sub_matches)) => error::multiple_error_types::wrap_error::sub_handler(sub_matches),
         Some((error::iter_result::NAME, sub_matches)) => error::iter_result::sub_handler(sub_matches),
+        // rust-by-example:std
+        Some((std::NAME, sub_matches)) => std::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
