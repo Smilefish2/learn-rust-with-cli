@@ -2,6 +2,7 @@ pub mod option_result;
 pub mod define_error_type;
 pub mod boxing_errors;
 pub mod reenter_question_mark;
+pub mod wrap_error;
 
 
 use clap::{App, ArgMatches};

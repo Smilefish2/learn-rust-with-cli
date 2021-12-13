@@ -180,6 +180,7 @@ pub fn run(){
             error::multiple_error_types::define_error_type::sub_command(),
             error::multiple_error_types::boxing_errors::sub_command(),
             error::multiple_error_types::reenter_question_mark::sub_command(),
+            error::multiple_error_types::wrap_error::sub_command(),
         ]);
 
     // clap matches
@@ -350,6 +351,7 @@ pub fn run(){
         Some((error::multiple_error_types::define_error_type::NAME, sub_matches)) => error::multiple_error_types::define_error_type::sub_handler(sub_matches),
         Some((error::multiple_error_types::boxing_errors::NAME, sub_matches)) => error::multiple_error_types::boxing_errors::sub_handler(sub_matches),
         Some((error::multiple_error_types::reenter_question_mark::NAME, sub_matches)) => error::multiple_error_types::reenter_question_mark::sub_handler(sub_matches),
+        Some((error::multiple_error_types::wrap_error::NAME, sub_matches)) => error::multiple_error_types::wrap_error::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
