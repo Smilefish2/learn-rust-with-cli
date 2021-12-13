@@ -61,5 +61,3 @@ pub fn sub_handler(_matches :&ArgMatches){
     // println!("rc_examples: {}", rc_examples);
     // TODO ^ Try uncommenting this line
 }
-
-// 更多 Vec 方法可以在 std::vec 模块中找到。

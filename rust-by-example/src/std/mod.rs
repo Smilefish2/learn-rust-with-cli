@@ -6,6 +6,7 @@ pub mod result;
 pub mod panic;
 pub mod hash;
 pub mod rc;
+pub mod arc;
 
 use clap::{App, ArgMatches};
 
