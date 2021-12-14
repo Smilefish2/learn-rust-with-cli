@@ -198,6 +198,7 @@ pub fn run(){
             std::arc::sub_command(),
             // rust-by-example:std_misc
             std_misc::sub_command(),
+            std_misc::threads::sub_command(),
 
         ]);
 
@@ -387,6 +388,7 @@ pub fn run(){
         Some((std::arc::NAME, sub_matches)) => std::arc::sub_handler(sub_matches),
         // rust-by-example:std_misc
         Some((std_misc::NAME, sub_matches)) => std_misc::sub_handler(sub_matches),
+        Some((std_misc::threads::NAME, sub_matches)) => std_misc::threads::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
