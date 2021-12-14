@@ -2,6 +2,7 @@ pub mod threads;
 pub mod channels;
 pub mod path;
 pub mod file;
+pub mod process;
 
 use clap::{App, ArgMatches};
 
