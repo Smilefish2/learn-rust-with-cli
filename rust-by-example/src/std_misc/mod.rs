@@ -1,4 +1,5 @@
 pub mod threads;
+pub mod channels;
 
 use clap::{App, ArgMatches};
 

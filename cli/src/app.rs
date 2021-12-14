@@ -200,6 +200,7 @@ pub fn run(){
             std_misc::sub_command(),
             std_misc::threads::sub_command(),
             std_misc::threads::testcase_mapreduce::sub_command(),
+            std_misc::channels::sub_command(),
 
         ]);
 
@@ -391,6 +392,7 @@ pub fn run(){
         Some((std_misc::NAME, sub_matches)) => std_misc::sub_handler(sub_matches),
         Some((std_misc::threads::NAME, sub_matches)) => std_misc::threads::sub_handler(sub_matches),
         Some((std_misc::threads::testcase_mapreduce::NAME, sub_matches)) => std_misc::threads::testcase_mapreduce::sub_handler(sub_matches),
+        Some((std_misc::channels::NAME, sub_matches)) => std_misc::channels::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
