@@ -10,3 +10,6 @@ description = "Learn rust with cli"
 
 [dependencies.clap]
 version = "3.0.0-beta.5"
+
+[dependencies.colored]
+version = "2.0.0"

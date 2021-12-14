@@ -1,5 +1,6 @@
 pub mod open;
 pub mod create;
+pub mod read_lines;
 
 use clap::{App, ArgMatches};
 
