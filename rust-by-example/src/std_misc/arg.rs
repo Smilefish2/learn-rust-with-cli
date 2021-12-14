@@ -1,3 +1,5 @@
+pub mod matching;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:std_misc/arg";
