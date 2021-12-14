@@ -3,6 +3,7 @@ pub mod channels;
 pub mod path;
 pub mod file;
 pub mod process;
+pub mod fs;
 
 use clap::{App, ArgMatches};
 
