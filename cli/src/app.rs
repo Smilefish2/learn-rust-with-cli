@@ -204,6 +204,7 @@ pub fn run(){
             std_misc::path::sub_command(),
             std_misc::file::sub_command(),
             std_misc::file::open::sub_command(),
+            std_misc::file::create::sub_command(),
         ]);
 
     // clap matches
@@ -397,6 +398,7 @@ pub fn run(){
         Some((std_misc::channels::NAME, sub_matches)) => std_misc::channels::sub_handler(sub_matches),
         Some((std_misc::path::NAME, sub_matches)) => std_misc::path::sub_handler(sub_matches),
         Some((std_misc::file::open::NAME, sub_matches)) => std_misc::file::open::sub_handler(sub_matches),
+        Some((std_misc::file::create::NAME, sub_matches)) => std_misc::file::create::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

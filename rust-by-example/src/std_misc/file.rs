@@ -1,4 +1,6 @@
 pub mod open;
+pub mod create;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-by-example:std_misc/file";
