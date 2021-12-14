@@ -5,6 +5,7 @@ pub mod file;
 pub mod process;
 pub mod fs;
 pub mod arg;
+pub mod ffi;
 
 use clap::{App, ArgMatches};
 
