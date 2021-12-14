@@ -207,6 +207,7 @@ pub fn run(){
             std_misc::file::create::sub_command(),
             std_misc::file::read_lines::sub_command(),
             std_misc::process::sub_command(),
+            std_misc::process::pipe::sub_command(),
         ]);
 
     // clap matches
@@ -403,6 +404,7 @@ pub fn run(){
         Some((std_misc::file::create::NAME, sub_matches)) => std_misc::file::create::sub_handler(sub_matches),
         Some((std_misc::file::read_lines::NAME, sub_matches)) => std_misc::file::read_lines::sub_handler(sub_matches),
         Some((std_misc::process::NAME, sub_matches)) => std_misc::process::sub_handler(sub_matches),
+        Some((std_misc::process::pipe::NAME, sub_matches)) => std_misc::process::pipe::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
