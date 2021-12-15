@@ -1,5 +1,6 @@
 pub mod unit_testing;
 pub mod doc_testing;
+pub mod integration_testing;
 
 use clap::{App, ArgMatches};
 use colored::*;
