@@ -22,6 +22,7 @@ pub mod std_misc;
 pub mod testing;
 pub mod r#unsafe;
 pub mod compatibility;
+pub mod meta;
 
 // #[cfg(test)]
 // mod tests {

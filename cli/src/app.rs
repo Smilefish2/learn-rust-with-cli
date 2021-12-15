@@ -224,6 +224,8 @@ pub fn run(){
             // rust-by-example:compatibility
             compatibility::sub_command(),
             compatibility::raw_identifiers::sub_command(),
+            // rust-by-example:meta
+            meta::sub_command(),
         ]);
 
     // clap matches
@@ -437,6 +439,8 @@ pub fn run(){
         // rust-by-example:compatibility
         Some((compatibility::NAME, sub_matches)) => compatibility::sub_handler(sub_matches),
         Some((compatibility::raw_identifiers::NAME, sub_matches)) => compatibility::raw_identifiers::sub_handler(sub_matches),
+        // rust-by-example:meta
+        Some((meta::NAME, sub_matches)) => meta::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
