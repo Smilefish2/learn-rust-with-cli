@@ -213,6 +213,8 @@ pub fn run(){
             std_misc::arg::sub_command(),
             std_misc::arg::matching::sub_command(),
             std_misc::ffi::sub_command(),
+            // rust-by-example:testing
+            testing::sub_command(),
         ]);
 
     // clap matches
@@ -415,6 +417,9 @@ pub fn run(){
         Some((std_misc::arg::NAME, sub_matches)) => std_misc::arg::sub_handler(sub_matches),
         Some((std_misc::arg::matching::NAME, sub_matches)) => std_misc::arg::matching::sub_handler(sub_matches),
         Some((std_misc::ffi::NAME, sub_matches)) => std_misc::ffi::sub_handler(sub_matches),
+        // rust-by-example:testing
+        Some((testing::NAME, sub_matches)) => testing::sub_handler(sub_matches),
+
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
