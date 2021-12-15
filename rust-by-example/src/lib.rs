@@ -20,7 +20,8 @@ pub mod error;
 pub mod std;
 pub mod std_misc;
 pub mod testing;
-pub mod unsafes;
+pub mod r#unsafe;
+pub mod compatibility;
 
 // #[cfg(test)]
 // mod tests {
