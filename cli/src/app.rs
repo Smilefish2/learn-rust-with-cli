@@ -218,6 +218,7 @@ pub fn run(){
             testing::unit_testing::sub_command(),
             testing::doc_testing::sub_command(),
             testing::integration_testing::sub_command(),
+            testing::dev_dependencies::sub_command(),
         ]);
 
     // clap matches
@@ -425,6 +426,7 @@ pub fn run(){
         Some((testing::unit_testing::NAME, sub_matches)) => testing::unit_testing::sub_handler(sub_matches),
         Some((testing::doc_testing::NAME, sub_matches)) => testing::doc_testing::sub_handler(sub_matches),
         Some((testing::integration_testing::NAME, sub_matches)) => testing::integration_testing::sub_handler(sub_matches),
+        Some((testing::dev_dependencies::NAME, sub_matches)) => testing::dev_dependencies::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)

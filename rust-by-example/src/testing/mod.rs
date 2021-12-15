@@ -1,6 +1,7 @@
 pub mod unit_testing;
 pub mod doc_testing;
 pub mod integration_testing;
+pub mod dev_dependencies;
 
 use clap::{App, ArgMatches};
 use colored::*;
@@ -25,5 +26,5 @@ Rust 也支持在测试中指定额外的依赖：
     开发依赖
  */
 pub fn sub_handler(_matches :&ArgMatches){
-    println!("{}","参见：https://rustwiki.org/zh-CN/rust-by-example/testing.html".red());
+    println!("参见：{}","https://rustwiki.org/zh-CN/rust-by-example/testing.html".red());
 }
