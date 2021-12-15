@@ -1,4 +1,4 @@
-// pub mod visibility;
+pub mod doc;
 
 use clap::{App, ArgMatches};
 use colored::*;
