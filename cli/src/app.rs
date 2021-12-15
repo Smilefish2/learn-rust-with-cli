@@ -227,6 +227,7 @@ pub fn run(){
             // rust-by-example:meta
             meta::sub_command(),
             meta::doc::sub_command(),
+            meta::playpen::sub_command(),
         ]);
 
     // clap matches
@@ -443,6 +444,7 @@ pub fn run(){
         // rust-by-example:meta
         Some((meta::NAME, sub_matches)) => meta::sub_handler(sub_matches),
         Some((meta::doc::NAME, sub_matches)) => meta::doc::sub_handler(sub_matches),
+        Some((meta::playpen::NAME, sub_matches)) => meta::playpen::sub_handler(sub_matches),
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)

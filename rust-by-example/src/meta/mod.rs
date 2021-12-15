@@ -1,4 +1,5 @@
 pub mod doc;
+pub mod playpen;
 
 use clap::{App, ArgMatches};
 use colored::*;
