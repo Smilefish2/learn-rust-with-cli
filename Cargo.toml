@@ -3,6 +3,7 @@ resolver = "2"
 members = [
     "cli",
     "rust-by-example",
+    "rust-course",
 ]
 
 # NB: the `bench` and `release` profiles must remain EXACTLY the same.

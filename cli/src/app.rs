@@ -1,6 +1,7 @@
 use clap::{App, AppSettings};
 
 use rust_by_example::*;
+use rust_course::*;
 
 // read cargo env
 const NAME: Option<&'static str> = option_env!("CARGO_PKG_NAME");
@@ -17,6 +18,7 @@ pub fn run(){
         .about(DESCRIPTION.unwrap_or("unknown"))
         .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands([
+            //============================== rust-by-example ==============================
             // rust-by-example:hello
             hello::sub_command(),
             hello::comment::sub_command(),
@@ -228,6 +230,10 @@ pub fn run(){
             meta::sub_command(),
             meta::doc::sub_command(),
             meta::playpen::sub_command(),
+            //============================== rust-course ==============================
+            // rust-course:compound_type
+            compound_type::sub_command(),
+            compound_type::string_slice::sub_command(),
         ]);
 
     // clap matches
@@ -235,6 +241,7 @@ pub fn run(){
 
     // match subcommand
     match matches.subcommand() {
+        //============================== rust-by-example ==============================
         // rust-by-example:hello
         Some((hello::NAME, sub_matches)) => hello::sub_handler(sub_matches),
         Some((hello::comment::NAME, sub_matches)) => hello::comment::sub_handler(sub_matches),
@@ -445,7 +452,10 @@ pub fn run(){
         Some((meta::NAME, sub_matches)) => meta::sub_handler(sub_matches),
         Some((meta::doc::NAME, sub_matches)) => meta::doc::sub_handler(sub_matches),
         Some((meta::playpen::NAME, sub_matches)) => meta::playpen::sub_handler(sub_matches),
-
+        //============================== rust-course ==============================
+        // rust-course:compound_type
+        Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
+        Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
