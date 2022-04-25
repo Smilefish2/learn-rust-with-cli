@@ -12,7 +12,7 @@ pub fn sub_command<'help>() -> App<'help> {
     return sub_command;
 }
 
-#[crate_name = "doc"]
+// #[crate_name = "doc"]
 /// 这里给出一个人类
 pub struct Person {
     /// 一个人必须有名字，不管 Juliet 多讨厌他/她。
