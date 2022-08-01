@@ -34,7 +34,7 @@ pub fn sub_handler(_matches :&ArgMatches){
     let a1 = &s1[0..3];
     println!("{}",a1);
 
-    let mut s = String::from("hello world");
+    let s = String::from("hello world");
 
     let word = first_word(&s);
 

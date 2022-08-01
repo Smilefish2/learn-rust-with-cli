@@ -4,6 +4,14 @@ Use the way of developing command-line applications to practice and learn the ru
 
 用开发命令行应用程序的方式，一边实践一边学Rust语言。
 
+# Run & Build
+```
+# Run
+cargo run rust-by-example:hello 
+# Build
+cargo run rust-by-example:hello 
+```
+
 # Cargo:rust-by-example
 
 English：[https://doc.rust-lang.org/rust-by-example/](https://doc.rust-lang.org/rust-by-example/)
