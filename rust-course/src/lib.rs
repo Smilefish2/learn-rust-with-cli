@@ -1,4 +1,5 @@
 pub mod compound_type;
+pub mod first_try;
 // #[cfg(test)]
 // mod tests {
 //     #[test]

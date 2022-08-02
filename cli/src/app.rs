@@ -231,6 +231,9 @@ pub fn run(){
             meta::doc::sub_command(),
             meta::playpen::sub_command(),
             //============================== rust-course ==============================
+            // rust-course:first-try
+            first_try::sub_command(),
+            first_try::word_hello::sub_command(),
             // rust-course:compound_type
             compound_type::sub_command(),
             compound_type::string_slice::sub_command(),
@@ -453,6 +456,9 @@ pub fn run(){
         Some((meta::doc::NAME, sub_matches)) => meta::doc::sub_handler(sub_matches),
         Some((meta::playpen::NAME, sub_matches)) => meta::playpen::sub_handler(sub_matches),
         //============================== rust-course ==============================
+        // rust-course:first-try
+        Some((first_try::NAME, sub_matches)) => first_try::sub_handler(sub_matches),
+        Some((first_try::word_hello::NAME, sub_matches)) => first_try::word_hello::sub_handler(sub_matches),
         // rust-course:compound_type
         Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
         Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
