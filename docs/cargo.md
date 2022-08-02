@@ -8,6 +8,7 @@ cargo init rust-by-example --lib
 # 运行项目
 ```
 cargo run
+cargo run --release
 ```
 # 构建项目
 ```
