@@ -235,8 +235,10 @@ pub fn run(){
             first_try::sub_command(),
             first_try::word_hello::sub_command(),
             // rust-course:compound_type
-            compound_type::sub_command(),
-            compound_type::string_slice::sub_command(),
+            basic::sub_command(),
+            // // rust-course:compound_type
+            // compound_type::sub_command(),
+            // compound_type::string_slice::sub_command(),
         ]);
 
     // clap matches
@@ -459,9 +461,11 @@ pub fn run(){
         // rust-course:first-try
         Some((first_try::NAME, sub_matches)) => first_try::sub_handler(sub_matches),
         Some((first_try::word_hello::NAME, sub_matches)) => first_try::word_hello::sub_handler(sub_matches),
-        // rust-course:compound_type
-        Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
-        Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
+        // rust-course:basic
+        Some((basic::NAME, sub_matches)) => basic::sub_handler(sub_matches),
+        // // rust-course:compound_type
+        // Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
+        // Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()
