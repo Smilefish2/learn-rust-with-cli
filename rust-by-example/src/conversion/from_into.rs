@@ -31,6 +31,7 @@ From
 
 
 #[derive(Debug)]
+#[allow(dead_code)]// remove warning: field is never read: `xxx`
 struct Number {
     value: i32,
 }

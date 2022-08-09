@@ -16,10 +16,12 @@ pub fn sub_command<'help>() -> App<'help> {
 // 一个 `Borrowed` 类型，含有一个指向 `i32` 类型的引用。
 // 该引用必须比 `Borrowed` 寿命更长。
 #[derive(Debug)]
+#[allow(dead_code)]// remove warning: field is never read: `xxx`
 struct Borrowed<'a>(&'a i32);
 
 // 和前面类似，这里的两个引用都必须比这个结构体长寿。
 #[derive(Debug)]
+#[allow(dead_code)]// remove warning: field is never read: `xxx`
 struct NamedBorrowed<'a> {
     x: &'a i32,
     y: &'a i32,

@@ -21,6 +21,7 @@ pub fn sub_command<'help>() -> App<'help> {
 **/
 
 #[derive(Debug)]
+#[allow(dead_code)]// remove warning: field is never read: `xxx`
 struct Person<'a> {
     name: &'a str,
     age: u8,

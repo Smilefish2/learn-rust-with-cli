@@ -1,3 +1,5 @@
+pub mod variable;
+
 use clap::{App, ArgMatches};
 
 pub const NAME: &'static str = "rust-course:basic";
@@ -25,12 +27,13 @@ pub fn sub_handler(_matches :&ArgMatches){
     // 这里有两点值得注意：
     // 1. 可以在数值中带上类型:30i32表示数值是30，类型是i32
     // 2. c是可变的，mut是mutable的缩写
-    let mut c = 30i32;
-    // let c = 30i32;// mut 未使用编译警告,remove
+    // let mut c = 30i32;
+    let c = 30i32;// mut 未使用编译警告,remove
     // 还能在数值和类型中间添加一个下划线，让可读性更好
     let d = 30_i32;
     // 跟其它语言一样，可以使用一个函数的返回值来作为另一个函数的参数
     let e = add(add(a, b), add(c, d));
+
 
     // println!是宏调用，看起来像是函数但是它返回的是宏定义的代码块
     // 该函数将指定的格式化字符串输出到标准输出中(控制台)

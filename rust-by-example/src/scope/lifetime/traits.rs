@@ -15,6 +15,7 @@ trait 方法中生命期的标注基本上与函数类似。注意，impl 也可
 
 // 带有生命周期标注的结构体。
 #[derive(Debug)]
+#[allow(dead_code)]// remove warning: field is never read: `xxx`
 struct Borrowed<'a> {
     x: &'a i32,
 }

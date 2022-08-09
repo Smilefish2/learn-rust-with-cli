@@ -27,7 +27,6 @@ struct DebugPrintable(i32);
 所有 std 库类型都天生可以使用 {:?} 来打印：
 
  **/
-
 pub fn sub_handler(_matches :&ArgMatches){
     // 推导 `Structure` 的 `fmt::Debug` 实现。
     // `Structure` 是一个包含单个 `i32` 的结构体。
@@ -55,6 +54,7 @@ pub fn sub_handler(_matches :&ArgMatches){
 
     // 所以 fmt::Debug 确实使这些内容可以打印，但是牺牲了一些美感。Rust 也通过 {:#?} 提供了 “美化打印” 的功能：
     #[derive(Debug)]
+    #[allow(dead_code)]// remove warning: field is never read: `xxx`
     struct Person<'a> {
         name: &'a str,
         age: u8

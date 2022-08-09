@@ -48,6 +48,7 @@ pub fn sub_handler(_matches :&ArgMatches){
     }
 
     #[derive(Debug)]
+    #[allow(dead_code)]// remove warning: field is never read: `xxx`
     struct Color {
         red: u8,
         green: u8,

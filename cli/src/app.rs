@@ -236,6 +236,7 @@ pub fn run(){
             first_try::word_hello::sub_command(),
             // rust-course:compound_type
             basic::sub_command(),
+            basic::variable::sub_command(),
             // // rust-course:compound_type
             // compound_type::sub_command(),
             // compound_type::string_slice::sub_command(),
@@ -463,6 +464,7 @@ pub fn run(){
         Some((first_try::word_hello::NAME, sub_matches)) => first_try::word_hello::sub_handler(sub_matches),
         // rust-course:basic
         Some((basic::NAME, sub_matches)) => basic::sub_handler(sub_matches),
+        Some((basic::variable::NAME, sub_matches)) => basic::variable::sub_handler(sub_matches),
         // // rust-course:compound_type
         // Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
         // Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
