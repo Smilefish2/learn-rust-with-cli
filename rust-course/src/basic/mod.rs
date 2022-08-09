@@ -1,4 +1,5 @@
 pub mod variable;
+pub mod variable_practice;
 
 use clap::{App, ArgMatches};
 
