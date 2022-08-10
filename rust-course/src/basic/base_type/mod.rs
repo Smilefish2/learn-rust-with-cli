@@ -1,5 +1,6 @@
 pub mod numbers;
 pub mod char_bool;
+pub mod statement_expression;
 
 use clap::{App, ArgMatches};
 
