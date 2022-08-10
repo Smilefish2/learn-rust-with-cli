@@ -1,6 +1,7 @@
 pub mod variable;
 pub mod base_type;
 pub mod ownership;
+pub mod compound_type;
 
 use clap::{App, ArgMatches};
 

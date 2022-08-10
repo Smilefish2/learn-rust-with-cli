@@ -1,6 +1,6 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:compound_type/string_slice";
+pub const NAME: &'static str = "rust-course:basic/compound_type/string_slice";
 const ABOUT: &'static str = "https://course.rs/basic/compound-type/string-slice.html";
 
 pub fn sub_command<'help>() -> App<'help> {
@@ -41,4 +41,8 @@ pub fn sub_handler(_matches :&ArgMatches){
     // s.clear(); // error!
 
     println!("the first word is: {}", word);
+
+    let s = "Hello, world!";
+    println!("{}", &s[0..2]);
+
 }

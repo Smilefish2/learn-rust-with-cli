@@ -1,6 +1,6 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic:base_type:char_bool";
+pub const NAME: &'static str = "rust-course:basic/base-type/char-bool";
 const ABOUT: &'static str = "https://course.rs/basic/base-type/char-bool.html";
 
 pub fn sub_command<'help>() -> App<'help> {

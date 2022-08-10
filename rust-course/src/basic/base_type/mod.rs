@@ -5,7 +5,7 @@ pub mod function;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic:base_type";
+pub const NAME: &'static str = "rust-course:basic/base-type";
 const ABOUT: &'static str = "https://course.rs/basic/base-type/intro.html";
 
 pub fn sub_command<'help>() -> App<'help> {

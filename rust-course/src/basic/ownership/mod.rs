@@ -3,7 +3,7 @@ pub mod borrowing;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:ownership";
+pub const NAME: &'static str = "rust-course:basic/ownership";
 const ABOUT: &'static str = "https://course.rs/basic/ownership/index.html";
 
 pub fn sub_command<'help>() -> App<'help> {

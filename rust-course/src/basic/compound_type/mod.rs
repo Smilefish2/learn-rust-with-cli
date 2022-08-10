@@ -2,7 +2,7 @@ pub mod string_slice;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:compound_type";
+pub const NAME: &'static str = "rust-course:basic/compound_type";
 const ABOUT: &'static str = "https://course.rs/basic/compound-type/intro.html";
 
 pub fn sub_command<'help>() -> App<'help> {

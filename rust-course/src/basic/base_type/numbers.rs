@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 use num::complex::Complex;
 
-pub const NAME: &'static str = "rust-course:basic:base_type:numbers";
+pub const NAME: &'static str = "rust-course:basic/base-type/numbers";
 const ABOUT: &'static str = "https://course.rs/basic/base-type/numbers.html";
 
 pub fn sub_command<'help>() -> App<'help> {
