@@ -242,6 +242,7 @@ pub fn run(){
             basic::base_type::numbers::sub_command(),
             basic::base_type::char_bool::sub_command(),
             basic::base_type::statement_expression::sub_command(),
+            basic::base_type::function::sub_command(),
             // // rust-course:compound_type
             // compound_type::sub_command(),
             // compound_type::string_slice::sub_command(),
@@ -477,6 +478,7 @@ pub fn run(){
         Some((basic::base_type::numbers::NAME, sub_matches)) => basic::base_type::numbers::sub_handler(sub_matches),
         Some((basic::base_type::char_bool::NAME, sub_matches)) => basic::base_type::char_bool::sub_handler(sub_matches),
         Some((basic::base_type::statement_expression::NAME, sub_matches)) => basic::base_type::statement_expression::sub_handler(sub_matches),
+        Some((basic::base_type::function::NAME, sub_matches)) => basic::base_type::function::sub_handler(sub_matches),
         // // rust-course:compound_type
         // Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
         // Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
