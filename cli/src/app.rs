@@ -244,6 +244,7 @@ pub fn run(){
             basic::base_type::statement_expression::sub_command(),
             basic::base_type::function::sub_command(),
             basic::ownership::ownership::sub_command(),
+            basic::ownership::borrowing::sub_command(),
             // // rust-course:compound_type
             // compound_type::sub_command(),
             // compound_type::string_slice::sub_command(),
@@ -481,6 +482,7 @@ pub fn run(){
         Some((basic::base_type::statement_expression::NAME, sub_matches)) => basic::base_type::statement_expression::sub_handler(sub_matches),
         Some((basic::base_type::function::NAME, sub_matches)) => basic::base_type::function::sub_handler(sub_matches),
         Some((basic::ownership::ownership::NAME, sub_matches)) => basic::ownership::ownership::sub_handler(sub_matches),
+        Some((basic::ownership::borrowing::NAME, sub_matches)) => basic::ownership::borrowing::sub_handler(sub_matches),
         // // rust-course:compound_type
         // Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
         // Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
