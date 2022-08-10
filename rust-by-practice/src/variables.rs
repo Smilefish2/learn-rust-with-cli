@@ -1,7 +1,6 @@
-
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic:variable_practice";
+pub const NAME: &'static str = "rust-practice:variables";
 const ABOUT: &'static str = "https://zh.practice.rs/variables.html";
 
 pub fn sub_command<'help>() -> App<'help> {
@@ -91,5 +90,4 @@ pub fn sub_handler(_matches :&ArgMatches){
     [.., y] = [1, 2];
     // 填空，让代码工作
     assert_eq!([x,y], [3, 2]);
-
 }

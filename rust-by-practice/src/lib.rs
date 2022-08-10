@@ -1,5 +1,4 @@
-pub mod first_try;
-pub mod basic;
+pub mod variables;
 
 #[cfg(test)]
 mod tests {

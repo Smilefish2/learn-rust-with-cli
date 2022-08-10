@@ -2,6 +2,7 @@ use clap::{App, AppSettings};
 
 use rust_by_example::*;
 use rust_course::*;
+use rust_by_practice::*;
 
 // read cargo env
 const NAME: Option<&'static str> = option_env!("CARGO_PKG_NAME");
@@ -237,12 +238,14 @@ pub fn run(){
             // rust-course:compound_type
             basic::sub_command(),
             basic::variable::sub_command(),
-            basic::variable_practice::sub_command(),
             basic::base_type::sub_command(),
             basic::base_type::numbers::sub_command(),
             // // rust-course:compound_type
             // compound_type::sub_command(),
             // compound_type::string_slice::sub_command(),
+            //============================== rust-practice ==============================
+            variables::sub_command(),
+
         ]);
 
     // clap matches
@@ -468,12 +471,15 @@ pub fn run(){
         // rust-course:basic
         Some((basic::NAME, sub_matches)) => basic::sub_handler(sub_matches),
         Some((basic::variable::NAME, sub_matches)) => basic::variable::sub_handler(sub_matches),
-        Some((basic::variable_practice::NAME, sub_matches)) => basic::variable_practice::sub_handler(sub_matches),
         Some((basic::base_type::NAME, sub_matches)) => basic::base_type::sub_handler(sub_matches),
         Some((basic::base_type::numbers::NAME, sub_matches)) => basic::base_type::numbers::sub_handler(sub_matches),
         // // rust-course:compound_type
         // Some((compound_type::NAME, sub_matches)) => compound_type::sub_handler(sub_matches),
         // Some((compound_type::string_slice::NAME, sub_matches)) => compound_type::string_slice::sub_handler(sub_matches),
+
+        //============================== rust-practice ==============================
+        Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
+
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
         _ => unreachable!(), // If all subcommands are defined above, anything else is unreachabe!()

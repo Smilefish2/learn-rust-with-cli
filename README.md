@@ -21,3 +21,7 @@ English：[https://doc.rust-lang.org/rust-by-example/](https://doc.rust-lang.org
 # Cargo:rust-course
 
 中文版：[https://course.rs/](https://course.rs/)
+
+# Cargo:rust-practice
+
+中文版：[https://zh.practice.rs/](https://zh.practice.rs/)

@@ -4,6 +4,7 @@ members = [
     "cli",
     "rust-by-example",
     "rust-course",
+    "rust-by-practice",
 ]
 
 # NB: the `bench` and `release` profiles must remain EXACTLY the same.
