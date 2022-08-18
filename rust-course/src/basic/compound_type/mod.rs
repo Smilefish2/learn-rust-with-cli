@@ -1,4 +1,5 @@
 pub mod string_slice;
+pub mod tuple;
 
 use clap::{App, ArgMatches};
 
