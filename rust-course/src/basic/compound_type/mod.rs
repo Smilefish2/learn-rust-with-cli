@@ -1,5 +1,6 @@
 pub mod string_slice;
 pub mod tuple;
+pub mod structs;
 
 use clap::{App, ArgMatches};
 
