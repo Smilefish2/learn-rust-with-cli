@@ -249,6 +249,7 @@ pub fn run(){
             basic::compound_type::string_slice::sub_command(),
             basic::compound_type::tuple::sub_command(),
             basic::compound_type::structs::sub_command(),
+            basic::compound_type::enums::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -488,6 +489,7 @@ pub fn run(){
         Some((basic::compound_type::string_slice::NAME, sub_matches)) => basic::compound_type::string_slice::sub_handler(sub_matches),
         Some((basic::compound_type::tuple::NAME, sub_matches)) => basic::compound_type::tuple::sub_handler(sub_matches),
         Some((basic::compound_type::structs::NAME, sub_matches)) => basic::compound_type::structs::sub_handler(sub_matches),
+        Some((basic::compound_type::enums::NAME, sub_matches)) => basic::compound_type::enums::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
