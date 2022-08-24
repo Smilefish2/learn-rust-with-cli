@@ -2,6 +2,7 @@ pub mod string_slice;
 pub mod tuple;
 pub mod structs;
 pub mod enums;
+pub mod array;
 
 use clap::{App, ArgMatches};
 
