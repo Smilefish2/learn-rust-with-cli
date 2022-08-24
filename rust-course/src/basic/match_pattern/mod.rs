@@ -1,5 +1,6 @@
+pub mod match_if_let;
+
 use clap::{App, ArgMatches};
-// use chrono::Local;
 
 pub const NAME: &'static str = "rust-course:basic/match-pattern";
 const ABOUT: &'static str = "https://course.rs/match-pattern/intro.html";
