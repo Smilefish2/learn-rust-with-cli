@@ -16,3 +16,6 @@ version = "2.0.0"
 
 [dependencies.num]
 version = "0.4.0"
+
+[dependencies.chrono]
+version = "0.4"
