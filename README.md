@@ -25,3 +25,7 @@ English：[https://doc.rust-lang.org/rust-by-example/](https://doc.rust-lang.org
 # Cargo:rust-by-practice
 
 中文版：[https://zh.practice.rs/](https://zh.practice.rs/)
+
+# Cargo:rust-cookbook
+
+中文版：[https://rustwiki.org/zh-CN/rust-cookbook/](https://rustwiki.org/zh-CN/rust-cookbook/)

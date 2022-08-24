@@ -252,6 +252,7 @@ pub fn run(){
             basic::compound_type::enums::sub_command(),
             basic::compound_type::array::sub_command(),
             basic::flow_control::sub_command(),
+            basic::match_pattern::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -494,6 +495,7 @@ pub fn run(){
         Some((basic::compound_type::enums::NAME, sub_matches)) => basic::compound_type::enums::sub_handler(sub_matches),
         Some((basic::compound_type::array::NAME, sub_matches)) => basic::compound_type::array::sub_handler(sub_matches),
         Some((basic::flow_control::NAME, sub_matches)) => basic::flow_control::sub_handler(sub_matches),
+        Some((basic::match_pattern::NAME, sub_matches)) => basic::match_pattern::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),

@@ -3,6 +3,7 @@ pub mod base_type;
 pub mod ownership;
 pub mod compound_type;
 pub mod flow_control;
+pub mod match_pattern;
 
 use clap::{App, ArgMatches};
 
