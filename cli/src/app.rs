@@ -256,6 +256,7 @@ pub fn run(){
             basic::match_pattern::match_if_let::sub_command(),
             basic::match_pattern::option::sub_command(),
             basic::match_pattern::pattern_match::sub_command(),
+            basic::match_pattern::all_patterns::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -502,6 +503,7 @@ pub fn run(){
         Some((basic::match_pattern::match_if_let::NAME, sub_matches)) => basic::match_pattern::match_if_let::sub_handler(sub_matches),
         Some((basic::match_pattern::option::NAME, sub_matches)) => basic::match_pattern::option::sub_handler(sub_matches),
         Some((basic::match_pattern::pattern_match::NAME, sub_matches)) => basic::match_pattern::pattern_match::sub_handler(sub_matches),
+        Some((basic::match_pattern::all_patterns::NAME, sub_matches)) => basic::match_pattern::all_patterns::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
