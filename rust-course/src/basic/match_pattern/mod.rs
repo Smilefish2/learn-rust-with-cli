@@ -1,5 +1,6 @@
 pub mod match_if_let;
 pub mod option;
+pub mod pattern_match;
 
 use clap::{App, ArgMatches};
 
