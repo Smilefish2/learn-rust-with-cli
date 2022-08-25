@@ -254,6 +254,7 @@ pub fn run(){
             basic::flow_control::sub_command(),
             basic::match_pattern::sub_command(),
             basic::match_pattern::match_if_let::sub_command(),
+            basic::match_pattern::option::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -498,6 +499,7 @@ pub fn run(){
         Some((basic::flow_control::NAME, sub_matches)) => basic::flow_control::sub_handler(sub_matches),
         Some((basic::match_pattern::NAME, sub_matches)) => basic::match_pattern::sub_handler(sub_matches),
         Some((basic::match_pattern::match_if_let::NAME, sub_matches)) => basic::match_pattern::match_if_let::sub_handler(sub_matches),
+        Some((basic::match_pattern::option::NAME, sub_matches)) => basic::match_pattern::option::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
