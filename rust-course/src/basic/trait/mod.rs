@@ -1,4 +1,5 @@
-pub mod  generics;
+pub mod generics;
+pub mod r#trait;
 
 use clap::{App, ArgMatches};
 

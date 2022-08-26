@@ -260,6 +260,7 @@ pub fn run(){
             basic::method::sub_command(),
             basic::r#trait::sub_command(),
             basic::r#trait::generics::sub_command(),
+            basic::r#trait::r#trait::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -510,6 +511,7 @@ pub fn run(){
         Some((basic::method::NAME, sub_matches)) => basic::method::sub_handler(sub_matches),
         Some((basic::r#trait::NAME, sub_matches)) => basic::r#trait::sub_handler(sub_matches),
         Some((basic::r#trait::generics::NAME, sub_matches)) => basic::r#trait::generics::sub_handler(sub_matches),
+        Some((basic::r#trait::r#trait::NAME, sub_matches)) => basic::r#trait::r#trait::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),

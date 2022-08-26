@@ -79,11 +79,13 @@ impl<T, U> Point3<T, U> {
     }
 }
 
+#[allow(dead_code)]
 fn display_array<T: std::fmt::Debug>(arr: &[T]){
     println!("{:?}", arr);
 }
 
 // const 泛型
+#[allow(dead_code)]
 fn display_array2<T: std::fmt::Debug, const N: usize>(arr: [T; N]){
     println!("{:?}", arr);
 }
