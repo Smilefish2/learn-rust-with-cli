@@ -6,8 +6,8 @@ pub mod dev_dependencies;
 use clap::{App, ArgMatches};
 use colored::*;
 
-pub const NAME: &'static str = "rust-by-example:testing";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/testing.html";
+pub const NAME: &str = "rust-by-example:testing";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/testing.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

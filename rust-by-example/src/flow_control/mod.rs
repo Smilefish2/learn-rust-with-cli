@@ -8,8 +8,8 @@ pub mod matchs;
 pub mod if_let;
 pub mod while_let;
 
-pub const NAME: &'static str = "rust-by-example:flow_control";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control.html";
+pub const NAME: &str = "rust-by-example:flow_control";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

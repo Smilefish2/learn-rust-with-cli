@@ -4,8 +4,8 @@ pub mod enum_use;
 pub mod c_like;
 pub mod testcase_linked_list;
 
-pub const NAME: &'static str = "rust-by-example:custom_types/enum";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum.html";
+pub const NAME: &str = "rust-by-example:custom_types/enum";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

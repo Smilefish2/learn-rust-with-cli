@@ -1,8 +1,8 @@
 use std::fmt;
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:hello/print/print_display/testcase_list";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/hello/print/print_display/testcase_list.html";
+pub const NAME: &str = "rust-by-example:hello/print/print_display/testcase_list";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/hello/print/print_display/testcase_list.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

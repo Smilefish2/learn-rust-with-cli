@@ -5,8 +5,8 @@ pub mod enter_question_mark;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:error/result";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/error/result.html";
+pub const NAME: &str = "rust-by-example:error/result";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/error/result.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

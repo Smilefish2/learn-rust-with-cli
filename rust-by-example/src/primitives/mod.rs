@@ -4,8 +4,8 @@ pub mod array;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:primitives";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/primitives.html";
+pub const NAME: &str = "rust-by-example:primitives";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/primitives.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

@@ -2,8 +2,8 @@
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:macros/syntax/designators";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/macros/syntax/designators.html";
+pub const NAME: &str = "rust-by-example:macros/syntax/designators";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/macros/syntax/designators.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

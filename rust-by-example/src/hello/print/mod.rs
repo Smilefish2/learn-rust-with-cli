@@ -5,8 +5,8 @@ pub mod print_display;
 pub mod print_display_testcase_list;
 pub mod print_fmt;
 
-pub const NAME: &'static str = "rust-by-example:hello/print";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/hello/print.html";
+pub const NAME: &str = "rust-by-example:hello/print";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/hello/print.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

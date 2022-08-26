@@ -1,8 +1,8 @@
 use clap::{App, ArgMatches};
 use colored::*;
 
-pub const NAME: &'static str = "rust-by-example:meta/playpen";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/meta/playpen.html";
+pub const NAME: &str = "rust-by-example:meta/playpen";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/meta/playpen.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

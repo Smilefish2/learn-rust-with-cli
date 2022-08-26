@@ -2,8 +2,8 @@ pub mod testcase_mapreduce;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std_misc/threads";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/threads.html";
+pub const NAME: &str = "rust-by-example:std_misc/threads";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/threads.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

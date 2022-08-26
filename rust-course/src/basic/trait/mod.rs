@@ -1,11 +1,12 @@
 pub mod generics;
 pub mod r#trait;
 pub mod trait_object;
+pub mod advance_trait;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic/trait";
-const ABOUT: &'static str = "https://course.rs/basic/trait.html";
+pub const NAME: &str = "rust-course:basic/trait";
+const ABOUT: &str = "https://course.rs/basic/trait.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

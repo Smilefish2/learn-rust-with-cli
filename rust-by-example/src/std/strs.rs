@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std/str";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std/str.html";
+pub const NAME: &str = "rust-by-example:std/str";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std/str.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -24,7 +24,7 @@ pub fn sub_handler(_matches :&ArgMatches){
 
     // （所有的类型标注都不是必需的）
     // 一个对只读内存中分配的字符串的引用
-    let pangram: &'static str = "the quick brown fox jumps over the lazy dog";
+    let pangram: &str = "the quick brown fox jumps over the lazy dog";
     println!("Pangram: {}", pangram);
 
     // 逆序迭代单词，这里并没有分配新的字符串

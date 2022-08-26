@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic/match-if-let";
-const ABOUT: &'static str = "https://course.rs/match-pattern/match-if-let.html";
+pub const NAME: &str = "rust-course:basic/match-if-let";
+const ABOUT: &str = "https://course.rs/match-pattern/match-if-let.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

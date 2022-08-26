@@ -3,8 +3,8 @@ use std::fmt::Display;
 use std::ops::Add;
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-course:basic/trait/trait";
-const ABOUT: &'static str = "https://course.rs/basic/trait/trait.html";
+pub const NAME: &str = "rust-course:basic/trait/trait";
+const ABOUT: &str = "https://course.rs/basic/trait/trait.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

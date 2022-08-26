@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std/panic";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std/panic.html";
+pub const NAME: &str = "rust-by-example:std/panic";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std/panic.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

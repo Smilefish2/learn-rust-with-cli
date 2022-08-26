@@ -3,8 +3,8 @@ use std::convert::TryFrom;
 use std::convert::TryInto;
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:conversion/try_from_try_into";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/conversion/try_from_try_into.html";
+pub const NAME: &str = "rust-by-example:conversion/try_from_try_into";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/conversion/try_from_try_into.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

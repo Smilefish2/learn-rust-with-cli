@@ -1,8 +1,8 @@
 use clap::{App, ArgMatches};
 use List::*;
 
-pub const NAME: &'static str = "rust-by-example:custom_types/enum/testcase_linked_list";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum/testcase_linked_list.html";
+pub const NAME: &str = "rust-by-example:custom_types/enum/testcase_linked_list";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/enum/testcase_linked_list.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

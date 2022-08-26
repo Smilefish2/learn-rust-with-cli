@@ -4,8 +4,8 @@ use clap::{App, ArgMatches};
 use colored;
 use colored::Colorize;
 
-pub const NAME: &'static str = "rust-by-example:testing/dev_dependencies";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/testing/dev_dependencies.html";
+pub const NAME: &str = "rust-by-example:testing/dev_dependencies";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/testing/dev_dependencies.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

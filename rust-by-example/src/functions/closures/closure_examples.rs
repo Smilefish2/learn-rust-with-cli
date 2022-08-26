@@ -3,8 +3,8 @@ pub mod iter_find;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:fn/closures/closure_examples";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/fn/closures/closure_examples.html";
+pub const NAME: &str = "rust-by-example:fn/closures/closure_examples";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/fn/closures/closure_examples.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

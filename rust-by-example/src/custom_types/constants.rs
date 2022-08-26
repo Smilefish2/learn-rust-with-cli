@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:custom_types/constants";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/constants.html";
+pub const NAME: &str = "rust-by-example:custom_types/constants";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/custom_types/constants.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -23,7 +23,7 @@ static：具有 'static 生命周期的，可以是可变的变量（译注：�
 
 
 // 全局变量是在在所有其他作用域之外声明的。
-static LANGUAGE: &'static str = "Rust";
+static LANGUAGE: &str = "Rust";
 const  THRESHOLD: i32 = 10;
 
 fn is_big(n: i32) -> bool {

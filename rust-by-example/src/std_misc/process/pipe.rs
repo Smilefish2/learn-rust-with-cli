@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std_misc/pipe";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/pipe.html";
+pub const NAME: &str = "rust-by-example:std_misc/pipe";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/pipe.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -16,7 +16,7 @@ std::Child 结构体代表了一个正在运行的子进程，它暴露了 stdin
 use std::io::prelude::*;
 use std::process::{Command, Stdio};
 
-static PANGRAM: &'static str =
+static PANGRAM: &str =
     "the quick brown fox jumped over the lazy dog\n";
 
 pub fn sub_handler(_matches :&ArgMatches){

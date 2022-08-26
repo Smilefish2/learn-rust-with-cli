@@ -2,8 +2,8 @@ pub mod question_mark;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std/result";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std/result.html";
+pub const NAME: &str = "rust-by-example:std/result";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std/result.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

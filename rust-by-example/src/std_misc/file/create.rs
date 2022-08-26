@@ -1,7 +1,7 @@
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:std_misc/file/create";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/file/create.html";
+pub const NAME: &str = "rust-by-example:std_misc/file/create";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/std_misc/file/create.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
@@ -13,7 +13,7 @@ pub fn sub_command<'help>() -> App<'help> {
 create 静态方法以只写模式（write-only mode）打开一个文件。若文件已经存在，则 旧内容将被销毁。否则，将创建一个新文件。
  */
 
-static LOREM_IPSUM: &'static str =
+static LOREM_IPSUM: &str =
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

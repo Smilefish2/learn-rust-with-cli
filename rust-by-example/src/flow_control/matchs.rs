@@ -4,8 +4,8 @@ pub mod destructuring;
 pub mod guard;
 pub mod binding;
 
-pub const NAME: &'static str = "rust-by-example:flow_control/match";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control/match.html";
+pub const NAME: &str = "rust-by-example:flow_control/match";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/flow_control/match.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

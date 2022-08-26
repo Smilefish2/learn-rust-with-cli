@@ -10,8 +10,8 @@ pub mod phantom;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:generics";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/generics.html";
+pub const NAME: &str = "rust-by-example:generics";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/generics.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

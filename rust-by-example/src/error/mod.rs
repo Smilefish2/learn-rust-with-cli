@@ -6,8 +6,8 @@ pub mod iter_result;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:error";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/error.html";
+pub const NAME: &str = "rust-by-example:error";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/error.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

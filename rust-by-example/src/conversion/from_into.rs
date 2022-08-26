@@ -2,8 +2,8 @@
 use std::convert::From;
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:conversion/from_into";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/conversion/from_into.html";
+pub const NAME: &str = "rust-by-example:conversion/from_into";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/conversion/from_into.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

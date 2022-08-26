@@ -10,8 +10,8 @@ pub mod elision;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:scope/lifetime";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/scope/lifetime.html";
+pub const NAME: &str = "rust-by-example:scope/lifetime";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/scope/lifetime.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

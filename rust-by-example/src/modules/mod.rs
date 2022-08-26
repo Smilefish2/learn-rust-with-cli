@@ -6,8 +6,8 @@ pub mod split;
 
 use clap::{App, ArgMatches};
 
-pub const NAME: &'static str = "rust-by-example:mod";
-const ABOUT: &'static str = "https://rustwiki.org/zh-CN/rust-by-example/mod.html";
+pub const NAME: &str = "rust-by-example:mod";
+const ABOUT: &str = "https://rustwiki.org/zh-CN/rust-by-example/mod.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)
