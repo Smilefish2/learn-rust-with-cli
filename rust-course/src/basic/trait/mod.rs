@@ -1,5 +1,6 @@
 pub mod generics;
 pub mod r#trait;
+pub mod trait_object;
 
 use clap::{App, ArgMatches};
 
