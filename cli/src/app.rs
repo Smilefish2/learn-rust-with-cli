@@ -248,8 +248,8 @@ pub fn run(){
             basic::compound_type::sub_command(),
             basic::compound_type::string_slice::sub_command(),
             basic::compound_type::tuple::sub_command(),
-            basic::compound_type::structs::sub_command(),
-            basic::compound_type::enums::sub_command(),
+            basic::compound_type::r#struct::sub_command(),
+            basic::compound_type::r#enum::sub_command(),
             basic::compound_type::array::sub_command(),
             basic::flow_control::sub_command(),
             basic::match_pattern::sub_command(),
@@ -258,6 +258,8 @@ pub fn run(){
             basic::match_pattern::pattern_match::sub_command(),
             basic::match_pattern::all_patterns::sub_command(),
             basic::method::sub_command(),
+            basic::r#trait::sub_command(),
+            basic::r#trait::generics::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -496,8 +498,8 @@ pub fn run(){
         Some((basic::compound_type::NAME, sub_matches)) => basic::compound_type::sub_handler(sub_matches),
         Some((basic::compound_type::string_slice::NAME, sub_matches)) => basic::compound_type::string_slice::sub_handler(sub_matches),
         Some((basic::compound_type::tuple::NAME, sub_matches)) => basic::compound_type::tuple::sub_handler(sub_matches),
-        Some((basic::compound_type::structs::NAME, sub_matches)) => basic::compound_type::structs::sub_handler(sub_matches),
-        Some((basic::compound_type::enums::NAME, sub_matches)) => basic::compound_type::enums::sub_handler(sub_matches),
+        Some((basic::compound_type::r#struct::NAME, sub_matches)) => basic::compound_type::r#struct::sub_handler(sub_matches),
+        Some((basic::compound_type::r#enum::NAME, sub_matches)) => basic::compound_type::r#enum::sub_handler(sub_matches),
         Some((basic::compound_type::array::NAME, sub_matches)) => basic::compound_type::array::sub_handler(sub_matches),
         Some((basic::flow_control::NAME, sub_matches)) => basic::flow_control::sub_handler(sub_matches),
         Some((basic::match_pattern::NAME, sub_matches)) => basic::match_pattern::sub_handler(sub_matches),
@@ -506,6 +508,8 @@ pub fn run(){
         Some((basic::match_pattern::pattern_match::NAME, sub_matches)) => basic::match_pattern::pattern_match::sub_handler(sub_matches),
         Some((basic::match_pattern::all_patterns::NAME, sub_matches)) => basic::match_pattern::all_patterns::sub_handler(sub_matches),
         Some((basic::method::NAME, sub_matches)) => basic::method::sub_handler(sub_matches),
+        Some((basic::r#trait::NAME, sub_matches)) => basic::r#trait::sub_handler(sub_matches),
+        Some((basic::r#trait::generics::NAME, sub_matches)) => basic::r#trait::generics::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
