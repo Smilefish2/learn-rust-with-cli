@@ -1,4 +1,5 @@
 pub mod vector;
+pub mod hashmap;
 
 use clap::{App, ArgMatches};
 
