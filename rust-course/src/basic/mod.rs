@@ -6,6 +6,7 @@ pub mod flow_control;
 pub mod match_pattern;
 pub mod method;
 pub mod r#trait;
+pub mod collections;
 
 use clap::{App, ArgMatches};
 

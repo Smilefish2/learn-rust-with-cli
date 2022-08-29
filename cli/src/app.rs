@@ -263,6 +263,8 @@ pub fn run(){
             basic::r#trait::r#trait::sub_command(),
             basic::r#trait::trait_object::sub_command(),
             basic::r#trait::advance_trait::sub_command(),
+            basic::collections::sub_command(),
+            basic::collections::vector::sub_command(),
             //============================== rust-practice ==============================
             variables::sub_command(),
 
@@ -516,6 +518,8 @@ pub fn run(){
         Some((basic::r#trait::r#trait::NAME, sub_matches)) => basic::r#trait::r#trait::sub_handler(sub_matches),
         Some((basic::r#trait::trait_object::NAME, sub_matches)) => basic::r#trait::trait_object::sub_handler(sub_matches),
         Some((basic::r#trait::advance_trait::NAME, sub_matches)) => basic::r#trait::advance_trait::sub_handler(sub_matches),
+        Some((basic::collections::NAME, sub_matches)) => basic::collections::sub_handler(sub_matches),
+        Some((basic::collections::vector::NAME, sub_matches)) => basic::collections::vector::sub_handler(sub_matches),
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
