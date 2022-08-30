@@ -6,7 +6,7 @@ pub mod function;
 use clap::{App, ArgMatches};
 
 pub const NAME: &str = "rust-course:basic/base-type";
-const ABOUT: &str = "https://course.rs/basic/base-type/intro.html";
+const ABOUT: &str = "https://course.rs/basic/base-type/index.html";
 
 pub fn sub_command<'help>() -> App<'help> {
     let sub_command = App::new(NAME)

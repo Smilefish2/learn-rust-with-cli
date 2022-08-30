@@ -7,9 +7,10 @@ Use the way of developing command-line applications to practice and learn the ru
 # Run & Build
 ```
 # Run
-cargo run rust-by-example:hello 
+cargo run rust-by-example:hello
+
 # Build
-cargo run rust-by-example:hello 
+cargo build --release
 ```
 
 # Cargo:rust-by-example
@@ -25,6 +26,10 @@ English：[https://doc.rust-lang.org/rust-by-example/](https://doc.rust-lang.org
 # Cargo:rust-by-practice
 
 中文版：[https://zh.practice.rs/](https://zh.practice.rs/)
+
+# Cargo:rust-algos
+
+中文版：[https://algos.rs/](https://algos.rs/)
 
 # Cargo:rust-cookbook
 

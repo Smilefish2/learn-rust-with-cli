@@ -3,6 +3,7 @@ use clap::{App, AppSettings};
 use rust_by_example::*;
 use rust_course::*;
 use rust_by_practice::*;
+use rust_algos::*;
 
 // read cargo env
 const NAME: Option<&'static str> = option_env!("CARGO_PKG_NAME");
@@ -269,6 +270,10 @@ pub fn run(){
             //============================== rust-practice ==============================
             variables::sub_command(),
 
+            //============================== rust-algos ==============================
+            sorting::sub_command(),
+            sorting::bubble_sort::sub_command(),
+
         ]);
 
     // clap matches
@@ -525,6 +530,11 @@ pub fn run(){
 
         //============================== rust-practice ==============================
         Some((variables::NAME, sub_matches)) => variables::sub_handler(sub_matches),
+
+        //============================== rust-algos ==============================
+        Some((sorting::NAME, sub_matches)) => sorting::sub_handler(sub_matches),
+        Some((sorting::bubble_sort::NAME, sub_matches)) => sorting::bubble_sort::sub_handler(sub_matches),
+
 
 
         None => println!("No subcommand was used"), // If no subcommand was used it'll match the tuple ("", None)
