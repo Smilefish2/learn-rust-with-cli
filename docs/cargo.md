@@ -1,7 +1,7 @@
 # 初始化一个项目
 ```
 # 默认创建src/main.rs模式的应用程序项目
-cargo init learn-rust-with-cli
+cargo init rust-labs
 # 使用--lib参数创建类库类型项目
 cargo init rust-by-example --lib
 ```

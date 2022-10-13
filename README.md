@@ -1,4 +1,4 @@
-# learn-rust-with-cli
+# rust-labs
 
 Use the way of developing command-line applications to practice and learn the rust language at the same time.
 
